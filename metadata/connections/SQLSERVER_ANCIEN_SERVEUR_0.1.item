@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_20esQC6MEe2P7IFFUZIgiA" name="SQLSERVER_ANCIEN_SERVEUR" id="_pRR50FN-EeyhTqsR4Xgvrw" label="SQLSERVER_ANCIEN_SERVEUR" dataPackage="_gRvrkPL2EeyO2Lv5lo_2fg" DatabaseType="Microsoft SQL Server" DriverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" URL="jdbc:sqlserver://10.7.7.48:1433;DatabaseName=etl_uat;" dbVersionString="MSSQL_PROP" Port="1433" Username="etl_read_uat" Password="ENC:[3QX0CK6d5TZjB0cPO5XV592y88pFv7ycxUqOPpSdDREjpOqzNIso]" ServerName="10.7.7.48" DatasourceName="" FileFieldName="" SID="etl_uat" SqlSynthax="" StringQuote="" NullChar="" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_GA3DsFN_EeyhTqsR4Xgvrw" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_GCUcQFN_EeyhTqsR4Xgvrw" tag="package filter" value=""/>
+    <taggedValue xmi:id="_GCfbYFN_EeyhTqsR4Xgvrw" tag="Status" value=""/>
+    <taggedValue xmi:id="_GCfbYVN_EeyhTqsR4Xgvrw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GCfbYlN_EeyhTqsR4Xgvrw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_GCfbY1N_EeyhTqsR4Xgvrw" tag="Description" value=""/>
+    <taggedValue xmi:id="_GCfbZFN_EeyhTqsR4Xgvrw" tag="Author" value=""/>
+    <taggedValue xmi:id="_GCfbZVN_EeyhTqsR4Xgvrw" tag="otherParameter"/>
+    <taggedValue xmi:id="_4G7C8FN_EeyhTqsR4Xgvrw" tag="DB ProductName" value="Microsoft SQL Server"/>
+    <taggedValue xmi:id="_4G7C8VN_EeyhTqsR4Xgvrw" tag="DB ProductVersion" value="15.00.2000"/>
+    <taggedValue xmi:id="_4G7C8lN_EeyhTqsR4Xgvrw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_GA3DsVN_EeyhTqsR4Xgvrw" key="CONN_PARA_KEY_USERNAME" value="etl_read_uat"/>
+    <parameters xmi:id="_XUd5gFN_EeyhTqsR4Xgvrw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_gRvrkPL2EeyO2Lv5lo_2fg" name="etl_uat" dataManager="_20esQC6MEe2P7IFFUZIgiA">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrkfL2EeyO2Lv5lo_2fg" name="db_accessadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrkvL2EeyO2Lv5lo_2fg" name="db_backupoperator"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrk_L2EeyO2Lv5lo_2fg" name="db_datareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrlPL2EeyO2Lv5lo_2fg" name="db_datawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrlfL2EeyO2Lv5lo_2fg" name="db_ddladmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrlvL2EeyO2Lv5lo_2fg" name="db_denydatareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrl_L2EeyO2Lv5lo_2fg" name="db_denydatawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrmPL2EeyO2Lv5lo_2fg" name="db_owner"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrmfL2EeyO2Lv5lo_2fg" name="db_securityadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrmvL2EeyO2Lv5lo_2fg" name="dbo"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrm_L2EeyO2Lv5lo_2fg" name="guest"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrnPL2EeyO2Lv5lo_2fg" name="INFORMATION_SCHEMA"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrnfL2EeyO2Lv5lo_2fg" name="sys"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrnvL2EeyO2Lv5lo_2fg" name="ADS"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrn_L2EeyO2Lv5lo_2fg" name="data"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvroPL2EeyO2Lv5lo_2fg" name="retail"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrofL2EeyO2Lv5lo_2fg" name="staging"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gRvrovL2EeyO2Lv5lo_2fg" name="talend"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

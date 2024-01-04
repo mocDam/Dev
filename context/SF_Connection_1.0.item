@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_UUreMGNPEeyimOYHAX85IA" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_UUreMWNPEeyimOYHAX85IA" comment="" name="SalesForceURL" prompt="Please enter SalesForce login URL?" promptNeeded="true" type="id_String" value="&quot;https://login.salesforce.com/services/Soap/u/45.0&quot;"/>
+  <contextParameter xmi:id="_UUreMmNPEeyimOYHAX85IA" comment="" name="SalesForceUsername" prompt="Please enter SalesForce username?" promptNeeded="true" type="id_String" value="&quot;slombard@b-wizz-u.com&quot;"/>
+  <contextParameter xmi:id="_UUreM2NPEeyimOYHAX85IA" comment="" name="SalesForcePassword" prompt="Please enter SalesForce password?" promptNeeded="true" type="id_String" value="&quot;UP5sgJkAZ6RSyQa&quot;"/>
+  <contextParameter xmi:id="_UUreNGNPEeyimOYHAX85IA" comment="" name="SalesForceToken" prompt="Please enter SalesForceToken?" promptNeeded="true" type="id_String" value="&quot;SluqJbvmhHJYFoAg2nVj8tVU&quot;"/>
+  <contextParameter xmi:id="_UUreNWNPEeyimOYHAX85IA" comment="" name="SalesforceOrderRT" prompt="Order Record Type?" promptNeeded="false" type="id_String" value="&quot;0122p0000003kGyAAI&quot;"/>
+</talendfile:ContextType>

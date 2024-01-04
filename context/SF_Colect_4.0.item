@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_UUmlsGNPEeyimOYHAX85IA" confirmationNeeded="false" name="Full">
+    <contextParameter xmi:id="_UUmlsWNPEeyimOYHAX85IA" comment="" name="colectSeasonId" prompt="colectSeasonId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlsmNPEeyimOYHAX85IA" comment="" name="colectSeasonName" prompt="colectSeasonName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmls2NPEeyimOYHAX85IA" comment="" name="colectBrandId" prompt="colectBrandId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmltGNPEeyimOYHAX85IA" comment="" name="colectBrandName" prompt="colectBrandName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmltWNPEeyimOYHAX85IA" comment="" name="colectStartDate" prompt="colectStartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUmltmNPEeyimOYHAX85IA" comment="" name="colectEndDate" prompt="colectEndDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUmlt2NPEeyimOYHAX85IA" comment="" name="colectBrandCbColumn" prompt="colectBrandCbColumn?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmluGNPEeyimOYHAX85IA" comment="" name="colectChannelColumn" prompt="colectChannelColumn?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmluWNPEeyimOYHAX85IA" comment="" name="colectAccountBrandFilter" prompt="colectAccountBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlumNPEeyimOYHAX85IA" comment="" name="colectAccountChannelFilter" prompt="colectAccountChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlu2NPEeyimOYHAX85IA" comment="" name="colectContactBrandFilter" prompt="colectContactBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlvGNPEeyimOYHAX85IA" comment="" name="colectContactChannelFilter" prompt="colectContactChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlvWNPEeyimOYHAX85IA" comment="" name="colectAddressBrandFilter" prompt="colectAddressBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlvmNPEeyimOYHAX85IA" comment="" name="colectAddressChannelFilter" prompt="colectAddressChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlv2NPEeyimOYHAX85IA" comment="" name="colectDiscountBrandFilter" prompt="colectDiscountBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlwGNPEeyimOYHAX85IA" comment="" name="colectDiscountChannelFilter" prompt="colectDiscountChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlwWNPEeyimOYHAX85IA" comment="" name="colectDirectoryOutput" prompt="colectDirectoryOutput?" promptNeeded="false" type="id_String" value="&quot;C:\Haddad_Interface_SF_JDE\Interface B2B\FULL&quot;"/>
+    <contextParameter xmi:id="_UUmlwmNPEeyimOYHAX85IA" comment="" name="colectDirectoryArchive" prompt="colectDirectoryArchive?" promptNeeded="false" type="id_String" value="&quot;C:\Haddad_Interface_SF_JDE\Interface B2B\FULL\Archive\Export\&quot;"/>
+    <contextParameter xmi:id="_UUmlw2NPEeyimOYHAX85IA" comment="" name="colectD0StartDate" prompt="colectD0StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUmlxGNPEeyimOYHAX85IA" comment="" name="colectD1StartDate" prompt="colectD1StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUmlxWNPEeyimOYHAX85IA" comment="" name="colectD2StartDate" prompt="colectD2StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUmlxmNPEeyimOYHAX85IA" comment="" name="colectD3StartDate" prompt="colectD3StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUmlx2NPEeyimOYHAX85IA" comment="" name="colectOrderXmlFileFolder" prompt="colectOrderXmlFileFolder?" promptNeeded="false" type="id_String" value="&quot;C:\Haddad_Interface_SF_JDE\Interface B2B\FULL\Archive\Import\Orders\&quot;"/>
+    <contextParameter xmi:id="_UUmlyGNPEeyimOYHAX85IA" comment="" name="colectOrderXmlFileName" prompt="colectOrderXmlFileName?" promptNeeded="false" type="id_String" value="&quot;WS7HEJGX76U5-206.xml&quot;"/>
+    <contextParameter xmi:id="_UUmlyWNPEeyimOYHAX85IA" comment="" name="colectExportWorkingDirectory" prompt="colectExportWorkingDirectory?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUmlymNPEeyimOYHAX85IA" comment="" name="colectFTPHost" prompt="colectFTPHost?" promptNeeded="false" type="id_String" value="images.apptitude.nl"/>
+    <contextParameter xmi:id="_UUmly2NPEeyimOYHAX85IA" comment="" name="colectFTPUser" prompt="colectFTPUser?" promptNeeded="false" type="id_String" value="haddad"/>
+    <contextParameter xmi:id="_UUmlzGNPEeyimOYHAX85IA" comment="" name="colectFTPPassword" prompt="colectFTPPassword?" promptNeeded="false" type="id_Password" value="ENC:[SgUFx4c+lDCBmEuKKovTlvhRVaJrWVmQP222+zR+85Ij/LhJwutQ86JnwTeqvA==]"/>
+    <contextParameter xmi:id="_UUmlzWNPEeyimOYHAX85IA" comment="" name="colectFTPDirDatafile" prompt="colectFTPDirDatafile?" promptNeeded="false" type="id_String" value="&quot;./UAT/datafiles&quot;"/>
+    <contextParameter xmi:id="_UUmlzmNPEeyimOYHAX85IA" comment="" name="colectFTPDirOrder" prompt="colectFTPDirOrder?" promptNeeded="false" type="id_String" value="&quot;./UAT/orderfiles&quot;"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_UUmlz2NPEeyimOYHAX85IA" confirmationNeeded="false" name="Production">
+    <contextParameter xmi:id="_UUml0GNPEeyimOYHAX85IA" comment="" name="colectSeasonId" prompt="colectSeasonId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml0WNPEeyimOYHAX85IA" comment="" name="colectSeasonName" prompt="colectSeasonName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml0mNPEeyimOYHAX85IA" comment="" name="colectBrandId" prompt="colectBrandId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml02NPEeyimOYHAX85IA" comment="" name="colectBrandName" prompt="colectBrandName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml1GNPEeyimOYHAX85IA" comment="" name="colectStartDate" prompt="colectStartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUml1WNPEeyimOYHAX85IA" comment="" name="colectEndDate" prompt="colectEndDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUml1mNPEeyimOYHAX85IA" comment="" name="colectBrandCbColumn" prompt="colectBrandCbColumn?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml12NPEeyimOYHAX85IA" comment="" name="colectChannelColumn" prompt="colectChannelColumn?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml2GNPEeyimOYHAX85IA" comment="" name="colectAccountBrandFilter" prompt="colectAccountBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml2WNPEeyimOYHAX85IA" comment="" name="colectAccountChannelFilter" prompt="colectAccountChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml2mNPEeyimOYHAX85IA" comment="" name="colectContactBrandFilter" prompt="colectContactBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml22NPEeyimOYHAX85IA" comment="" name="colectContactChannelFilter" prompt="colectContactChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml3GNPEeyimOYHAX85IA" comment="" name="colectAddressBrandFilter" prompt="colectAddressBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml3WNPEeyimOYHAX85IA" comment="" name="colectAddressChannelFilter" prompt="colectAddressChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml3mNPEeyimOYHAX85IA" comment="" name="colectDiscountBrandFilter" prompt="colectDiscountBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml32NPEeyimOYHAX85IA" comment="" name="colectDiscountChannelFilter" prompt="colectDiscountChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml4GNPEeyimOYHAX85IA" comment="" name="colectDirectoryOutput" prompt="colectDirectoryOutput?" promptNeeded="false" type="id_String" value="&quot;C:\Haddad_Interface_SF_JDE\Interface B2B\PROD\&quot;"/>
+    <contextParameter xmi:id="_UUml4WNPEeyimOYHAX85IA" comment="" name="colectDirectoryArchive" prompt="colectDirectoryArchive?" promptNeeded="false" type="id_String" value="&quot;C:\Haddad_Interface_SF_JDE\Interface B2B\PROD\Archive\Export&quot;"/>
+    <contextParameter xmi:id="_UUml4mNPEeyimOYHAX85IA" comment="" name="colectD0StartDate" prompt="colectD0StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUml42NPEeyimOYHAX85IA" comment="" name="colectD1StartDate" prompt="colectD1StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUml5GNPEeyimOYHAX85IA" comment="" name="colectD2StartDate" prompt="colectD2StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUml5WNPEeyimOYHAX85IA" comment="" name="colectD3StartDate" prompt="colectD3StartDate?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter xmi:id="_UUml5mNPEeyimOYHAX85IA" comment="" name="colectOrderXmlFileFolder" prompt="colectOrderXmlFileFolder?" promptNeeded="false" type="id_String" value="&quot;C:\Haddad_Interface_SF_JDE\Interface B2B\PROD\Archive\Import\Orders\&quot;"/>
+    <contextParameter xmi:id="_UUml52NPEeyimOYHAX85IA" comment="" name="colectOrderXmlFileName" prompt="colectOrderXmlFileName?" promptNeeded="false" type="id_String" value="&quot;632OUN69ROMI-297.xml&quot;"/>
+    <contextParameter xmi:id="_UUml6GNPEeyimOYHAX85IA" comment="" name="colectExportWorkingDirectory" prompt="colectExportWorkingDirectory?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_UUml6WNPEeyimOYHAX85IA" comment="" name="colectFTPHost" prompt="colectFTPHost?" promptNeeded="false" type="id_String" value="images.apptitude.nl"/>
+    <contextParameter xmi:id="_UUml6mNPEeyimOYHAX85IA" comment="" name="colectFTPUser" prompt="colectFTPUser?" promptNeeded="false" type="id_String" value="haddad"/>
+    <contextParameter xmi:id="_UUml62NPEeyimOYHAX85IA" comment="" name="colectFTPPassword" prompt="colectFTPPassword?" promptNeeded="false" type="id_Password" value="ENC:[Cjk9UfYdh9l3z62+gXq/5dO2lbbYEVu/Pe09naew49LamJl0UJzB8I7ThjVvww==]"/>
+    <contextParameter xmi:id="_UUml7GNPEeyimOYHAX85IA" comment="" name="colectFTPDirDatafile" prompt="colectFTPDirDatafile?" promptNeeded="false" type="id_String" value="&quot;./datafiles&quot;"/>
+    <contextParameter xmi:id="_UUml7WNPEeyimOYHAX85IA" comment="" name="colectFTPDirOrder" prompt="colectFTPDirOrder?" promptNeeded="false" type="id_String" value="&quot;./orderfiles&quot;"/>
+  </talendfile:ContextType>
+</xmi:XMI>

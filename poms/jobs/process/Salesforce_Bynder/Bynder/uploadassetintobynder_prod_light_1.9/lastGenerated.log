@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< org.example.dev.job:UploadAssetIntoBynder_PROD_LIGHT >--------
+[INFO] Building DEV UploadAssetIntoBynder_PROD_LIGHT-1.9.0 (1.9,Jobs) 1.9.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.talend.libraries:jboss-serialization:jar:6.0.0 is missing, no dependency information available
+[WARNING] The POM for org.talend.libraries:mssql-jdbc:jar:6.0.0 is missing, no dependency information available
+[WARNING] The POM for org.talend.libraries:trove:jar:6.0.0 is missing, no dependency information available
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[INFO] Building jar: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\Salesforce_Bynder\Bynder\uploadassetintobynder_prod_light_1.9\target\uploadassetintobynder_prod_light_1_9.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.0.0:single (default) @ UploadAssetIntoBynder_PROD_LIGHT ---
+[INFO] Reading assembly descriptor: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\Salesforce_Bynder\Bynder\uploadassetintobynder_prod_light_1.9/src/main/assemblies/assembly.xml
+[WARNING] Missing POM for org.talend.libraries:jboss-serialization:jar:6.0.0
+[WARNING] Missing POM for org.talend.libraries:mssql-jdbc:jar:6.0.0
+[WARNING] Missing POM for org.talend.libraries:trove:jar:6.0.0
+[INFO] Building zip: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\Salesforce_Bynder\Bynder\uploadassetintobynder_prod_light_1.9\target\uploadassetintobynder_prod_light_1_9.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.609 s
+[INFO] Finished at: 2023-06-02T16:34:41+02:00
+[INFO] ------------------------------------------------------------------------

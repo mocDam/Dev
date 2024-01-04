@@ -1,0 +1,3 @@
+$fileDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+cd $fileDir
+java '-Dtalend.component.manager.m2.repository=%cd%/../lib' '-Xms256M' '-Xmx1024M' '-Dfile.encoding=UTF-8' -cp '.;../lib/routines.jar;../lib/jaxb-api-2.3.1.jar;../lib/jaxb-impl-2.2.6-modified.jar;../lib/crypto-utils.jar;../lib/dom4j-1.6.1.jar;../lib/log4j-1.2.17.jar;../lib/mssql-jdbc.jar;masterfile_set_azure_storage_dynamics_0_2.jar;' dev.masterfile_set_azure_storage_dynamics_0_2.MASTERFILE_SET_AZURE_STORAGE_DYNAMICS  --context=Default $args

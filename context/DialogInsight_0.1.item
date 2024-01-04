@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_jd_u4FeZEe6uHq5Sicqw3w" confirmationNeeded="false" name="Full">
+    <contextParameter xmi:id="_jeAV8FeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_idKey" prompt="DialogInsight_idKey?" promptNeeded="false" type="id_Integer" value="21753"/>
+    <contextParameter xmi:id="_jeAV8VeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_key" prompt="DialogInsight_key?" promptNeeded="false" type="id_String" value="eAECuAd6kAz9Ubu2TNZ58Qn02PzgY7nS"/>
+    <contextParameter xmi:id="_jeAV8leZEe6uHq5Sicqw3w" comment="" name="DialogInsight_idProject" prompt="DialogInsight_idProject?" promptNeeded="false" type="id_Integer" value="17265831"/>
+    <contextParameter xmi:id="_jeAV81eZEe6uHq5Sicqw3w" comment="" name="DialogInsight_workingDirectory" prompt="DialogInsight_workingDirectory?" promptNeeded="false" type="id_String" value="&quot;C:\\Haddad_Interface_SF_JDE\\Interface DialogInsight\\FULL\\&quot;"/>
+    <contextParameter xmi:id="_jeAV9FeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_contactBatchSize" prompt="DialogInsight_contactBatchSize?" promptNeeded="false" type="id_Integer" value="99"/>
+    <contextParameter xmi:id="_jeAV9VeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_RootURL" prompt="DialogInsight_RootURL?" promptNeeded="false" type="id_String" value="&quot;https://app.mydialoginsight.com/webservices/ofc4&quot;"/>
+    <contextParameter xmi:id="_jeAV9leZEe6uHq5Sicqw3w" comment="" name="DialogInsight_FtpRoot" prompt="DialogInsight_FtpRoot?" promptNeeded="false" type="id_String" value="&quot;./UAT/datafiles/DI&quot;"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_jeAV91eZEe6uHq5Sicqw3w" confirmationNeeded="false" name="Production">
+    <contextParameter xmi:id="_jeAV-FeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_idKey" prompt="DialogInsight_idKey?" promptNeeded="false" type="id_Integer" value="21753"/>
+    <contextParameter xmi:id="_jeAV-VeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_key" prompt="DialogInsight_key?" promptNeeded="false" type="id_String" value="eAECuAd6kAz9Ubu2TNZ58Qn02PzgY7nS"/>
+    <contextParameter xmi:id="_jeAV-leZEe6uHq5Sicqw3w" comment="" name="DialogInsight_idProject" prompt="DialogInsight_idProject?" promptNeeded="false" type="id_Integer" value="17265824"/>
+    <contextParameter xmi:id="_jeAV-1eZEe6uHq5Sicqw3w" comment="" name="DialogInsight_workingDirectory" prompt="DialogInsight_workingDirectory?" promptNeeded="false" type="id_String" value="&quot;C:\\Haddad_Interface_SF_JDE\\Interface DialogInsight\\PROD\\&quot;"/>
+    <contextParameter xmi:id="_jeAV_FeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_contactBatchSize" prompt="DialogInsight_contactBatchSize?" promptNeeded="false" type="id_Integer" value="100"/>
+    <contextParameter xmi:id="_jeAV_VeZEe6uHq5Sicqw3w" comment="" name="DialogInsight_RootURL" prompt="DialogInsight_RootURL?" promptNeeded="false" type="id_String" value="&quot;https://app.mydialoginsight.com/webservices/ofc4&quot;"/>
+    <contextParameter xmi:id="_jeAV_leZEe6uHq5Sicqw3w" comment="" name="DialogInsight_FtpRoot" prompt="DialogInsight_FtpRoot?" promptNeeded="false" type="id_String" value="&quot;./datafiles/DI&quot;"/>
+  </talendfile:ContextType>
+</xmi:XMI>

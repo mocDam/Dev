@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_UUbmkGNPEeyimOYHAX85IA" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_UUbmkWNPEeyimOYHAX85IA" comment="" name="colectSeasonId" prompt="colectSeasonId?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmkmNPEeyimOYHAX85IA" comment="" name="colectSeasonName" prompt="colectSeasonName?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmk2NPEeyimOYHAX85IA" comment="" name="colectBrandId" prompt="colectBrandId?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmlGNPEeyimOYHAX85IA" comment="" name="colectBrandName" prompt="colectBrandName?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmlWNPEeyimOYHAX85IA" comment="" name="colectStartDate" prompt="colectStartDate?" promptNeeded="false" type="id_Date" value=""/>
+  <contextParameter xmi:id="_UUbmlmNPEeyimOYHAX85IA" comment="" name="colectEndDate" prompt="colectEndDate?" promptNeeded="false" type="id_Date" value=""/>
+  <contextParameter xmi:id="_UUbml2NPEeyimOYHAX85IA" comment="" name="colectBrandCbColumn" prompt="colectBrandCbColumn?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmmGNPEeyimOYHAX85IA" comment="" name="colectChannelColumn" prompt="colectChannelColumn?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmmWNPEeyimOYHAX85IA" comment="" name="colectAccountBrandFilter" prompt="colectAccountBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmmmNPEeyimOYHAX85IA" comment="" name="colectAccountChannelFilter" prompt="colectAccountChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmm2NPEeyimOYHAX85IA" comment="" name="colectContactBrandFilter" prompt="colectContactBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmnGNPEeyimOYHAX85IA" comment="" name="colectContactChannelFilter" prompt="colectContactChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmnWNPEeyimOYHAX85IA" comment="" name="colectAddressBrandFilter" prompt="colectAddressBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmnmNPEeyimOYHAX85IA" comment="" name="colectAddressChannelFilter" prompt="colectAddressChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmn2NPEeyimOYHAX85IA" comment="" name="colectDiscountBrandFilter" prompt="colectDiscountBrandFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmoGNPEeyimOYHAX85IA" comment="" name="colectDiscountChannelFilter" prompt="colectDiscountChannelFilter?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_UUbmoWNPEeyimOYHAX85IA" comment="" name="colectDirectoryOutput" prompt="colectDirectoryOutput?" promptNeeded="true" type="id_String" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace&quot;"/>
+  <contextParameter xmi:id="_UUbmomNPEeyimOYHAX85IA" comment="" name="colectDirectoryArchive" prompt="colectDirectoryArchive?" promptNeeded="true" type="id_String" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace/Archive&quot;"/>
+</talendfile:ContextType>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="PREPROD" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="ErrorHeader" prompt="ErrorHeader?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="hasErrorHeader" prompt="hasErrorHeader?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="dateValidation" prompt="dateValidation?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="timeValidation" prompt="timeValidation?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ReferentielPath" prompt="ReferentielPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="IntegrationExcelPath" prompt="IntegrationExcelPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ExcelFileName" prompt="ExcelFileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="LogPath" prompt="LogPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="isNike" prompt="isNike?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ExtractPath" prompt="ExtractPath?" promptNeeded="false" type="id_String" value="&quot;C:/Users/fdjeb/OneDrive - FRANCK DJEBIRI CONSULTING/B-WIZZ-U/HADDAD/FICHIER BUY/EXTRACTION FICHIER/&quot;"/>
+    <contextParameter comment="" name="ExtractPathPrice" prompt="ExtractPathPrice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="excelSheetName" prompt="excelSheetName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="errorFile" prompt="errorFile?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CreationDate" prompt="CreationDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Server" prompt="SQLSERVER_Server?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_Password" prompt="SQLSERVER_Password?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_Password" value="ENC:[puGno0WJpbF1OSIOqvUNqidc2243Q1hTqIDlA9lA50xQuvcLCh0dUFBWL27i0KmX]"/>
+    <contextParameter comment="" name="SQLSERVER_AdditionalParams" prompt="SQLSERVER_AdditionalParams?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Database" prompt="SQLSERVER_Database?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="TalendDBTest"/>
+    <contextParameter comment="" name="SQLSERVER_Port" prompt="SQLSERVER_Port?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_Schema" prompt="SQLSERVER_Schema?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Login" prompt="SQLSERVER_Login?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBTest"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[mYkjii7cQwK+lGVIiw5STbwMVo/0FBpDIZROTawSFe4iRgNFgDCC/5X6s74U7IFO]"/>
+    <contextParameter comment="" name="error_PriceCustomerGroup" prompt="error_PriceCustomerGroup?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="PROD">
+    <contextParameter comment="" name="ErrorHeader" prompt="ErrorHeader?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="hasErrorHeader" prompt="hasErrorHeader?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="dateValidation" prompt="dateValidation?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="timeValidation" prompt="timeValidation?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ReferentielPath" prompt="ReferentielPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="IntegrationExcelPath" prompt="IntegrationExcelPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ExcelFileName" prompt="ExcelFileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="LogPath" prompt="LogPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="isNike" prompt="isNike?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ExtractPath" prompt="ExtractPath?" promptNeeded="false" type="id_String" value="&quot;C:/Users/fdjeb/OneDrive - FRANCK DJEBIRI CONSULTING/B-WIZZ-U/HADDAD/FICHIER BUY/EXTRACTION FICHIER/&quot;"/>
+    <contextParameter comment="" name="ExtractPathPrice" prompt="ExtractPathPrice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="excelSheetName" prompt="excelSheetName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="errorFile" prompt="errorFile?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CreationDate" prompt="CreationDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Server" prompt="SQLSERVER_Server?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_Password" prompt="SQLSERVER_Password?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_Password" value="ENC:[N1nHBjoai01N03m3qMZIww6Gblw7mIkDtJme9eHkhPbrJ0pBUJRwQwNbEfIl/iHv]"/>
+    <contextParameter comment="" name="SQLSERVER_AdditionalParams" prompt="SQLSERVER_AdditionalParams?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Database" prompt="SQLSERVER_Database?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="TalendDBProduction"/>
+    <contextParameter comment="" name="SQLSERVER_Port" prompt="SQLSERVER_Port?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_Schema" prompt="SQLSERVER_Schema?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Login" prompt="SQLSERVER_Login?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBProduction"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[GzeAwe9xAaO+2UsclCJ+Xzg5D5Ng8fuh7EDVHkgAKh9XBYg3WHHou+FPXGOhP0IF]"/>
+    <contextParameter comment="" name="error_PriceCustomerGroup" prompt="error_PriceCustomerGroup?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="ErrorHeader" prompt="ErrorHeader?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="hasErrorHeader" prompt="hasErrorHeader?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="dateValidation" prompt="dateValidation?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="timeValidation" prompt="timeValidation?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ReferentielPath" prompt="ReferentielPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="IntegrationExcelPath" prompt="IntegrationExcelPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ExcelFileName" prompt="ExcelFileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="LogPath" prompt="LogPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="isNike" prompt="isNike?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ExtractPath" prompt="ExtractPath?" promptNeeded="false" type="id_String" value="&quot;C:/Users/fdjeb/OneDrive - FRANCK DJEBIRI CONSULTING/B-WIZZ-U/HADDAD/FICHIER BUY/EXTRACTION FICHIER/&quot;"/>
+    <contextParameter comment="" name="ExtractPathPrice" prompt="ExtractPathPrice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="excelSheetName" prompt="excelSheetName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="errorFile" prompt="errorFile?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CreationDate" prompt="CreationDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBTestPreProd"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[wgbYzpPB3JG5m6np46w1KeTj98O7fi80ZkiAtRFFTL6XiIcb3KLpp790MYbEGvw2]"/>
+    <contextParameter comment="" name="SQLSERVER_Schema" prompt="SQLSERVER_Schema?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_AdditionalParams" prompt="SQLSERVER_AdditionalParams?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_Server" prompt="SQLSERVER_Server?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_Password" prompt="SQLSERVER_Password?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_Password" value="ENC:[a0Lvc5jlVjkSJrfNd3gkPW9m7asbKJFjVALDtWt6ZCre9PICRHLzdShW/Q9xAYhh]"/>
+    <contextParameter comment="" name="SQLSERVER_Database" prompt="SQLSERVER_Database?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="TalendDBTestPreProd"/>
+    <contextParameter comment="" name="SQLSERVER_Port" prompt="SQLSERVER_Port?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_Login" prompt="SQLSERVER_Login?" promptNeeded="false" repositoryContextId="_y8LC0HuMEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="error_PriceCustomerGroup" prompt="error_PriceCustomerGroup?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="ENC:[ln0jjn6gFLF8yDpFvENaQj9EEJjf/AzMkW/m0l/3]" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_ZHPb8C67Ee2a4e17fkL-sA" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tMSSqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="URL" value="" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.SQLSERVER_LOG_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.SQLSERVER_LOG_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SQLSERVER_LOG_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.SQLSERVER_LOG_Database" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.SQLSERVER_LOG_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SQLSERVER_LOG_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.SQLSERVER_LOG_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ENC:[C4CSOhv+rW+PC8pEUB2nPZgF2jT8lyAAQJ6zWfskOvE4U/+8DoaCGBbmdyEQDA0SxnQxqHL/DSdzEg==]"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;Log&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_HBp7UOU_EeunwL7gj6SZaw" name="DataOperation"/>
+    <routinesParameter id="_HCBHsOU_EeunwL7gj6SZaw" name="Mathematical"/>
+    <routinesParameter id="_HCEyEOU_EeunwL7gj6SZaw" name="Numeric"/>
+    <routinesParameter id="_HCH1YOU_EeunwL7gj6SZaw" name="Relational"/>
+    <routinesParameter id="_HCKRoOU_EeunwL7gj6SZaw" name="StringHandling"/>
+    <routinesParameter id="_HCNU8OU_EeunwL7gj6SZaw" name="TalendDataGenerator"/>
+    <routinesParameter id="_HCQ_UOU_EeunwL7gj6SZaw" name="TalendDate"/>
+    <routinesParameter id="_HCUpsOU_EeunwL7gj6SZaw" name="TalendString"/>
+    <routinesParameter id="_HCYUEOU_EeunwL7gj6SZaw" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="2400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_2" show="false"/>
+    <elementParameter field="FILE" name="FILE_NAME" value="context.ExtractPathPrice + &quot;/Open sales price journal lines.csv&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="2400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.ExtractPathPrice + &quot;/Open sales price journal lines.csv&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace/delete_folder&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace/delete_folder or delete_file&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="CHECK" name="FOLDER" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Delete Open Sales Journal"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileDelete_1"/>
+  </node>
+  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="2080">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_12" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.ExtractPathPrice + &quot;Open sales price journal lines.xlsx&quot;"/>
+    <elementParameter field="TEXT" name="SHEETNAME" value="&quot;Open sales price journal lines&quot;"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="APPEND_FILE" value="false"/>
+    <elementParameter field="CHECK" name="APPEND_SHEET" value="true" show="false"/>
+    <elementParameter field="CHECK" name="FIRST_CELL_Y_ABSOLUTE" value="true"/>
+    <elementParameter field="TEXT" name="FIRST_CELL_X" value="0"/>
+    <elementParameter field="TEXT" name="FIRST_CELL_Y" value="0"/>
+    <elementParameter field="CHECK" name="KEEP_CELL_FORMATING" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="FONT" value=""/>
+    <elementParameter field="CHECK" name="IS_ALL_AUTO_SZIE" value="false"/>
+    <elementParameter field="TABLE" name="AUTO_SZIE_SETTING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ITEMNUMBER"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRICE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRICECURRENCYCODE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRICECUSTOMERGROUPCODE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCTCOLORID"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCTSIZEID"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCTSTYLEID"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SEASON"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GROUPCODE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FromDate"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ToDate"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="ENC:[ejcSutkPPs3gLjfhxC8495VWJWhsMe2Dd9J7MWrE]" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="100" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="RECALCULATE_FORMULA" value="false" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="SALES PRICE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputExcel_12">
+      <column comment="" key="false" length="-1" name="ITEMNUMBER" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="PRICE" nullable="true" pattern="" precision="2" sourceType="" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRICECURRENCYCODE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRICECUSTOMERGROUPCODE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRODUCTCOLORID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRODUCTSIZEID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRODUCTSTYLEID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SEASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COUNTRY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="GROUPCODE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="34" name="FromDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="34" name="ToDate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;SUB JOB EXTRACT PRICE CHECK&quot;);&#xA;System.out.println(context.ExcelFileName);&#xA;System.out.println(context.CreationDate);&#xA;System.out.println(&quot;******************* SHEMA *****************&quot;);&#xA;System.out.println(context.SQLSERVER_LOG_Schema);&#xA;System.out.println(&quot;******************* SHEMA *****************&quot;);&#xA;context.error_PriceCustomerGroup = null;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_pRR50FN-EeyhTqsR4Xgvrw" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.SQLSERVER_Server"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.SQLSERVER_Port"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="context.SQLSERVER_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SQLSERVER_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.SQLSERVER_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ENC:[zWFDFgP/QDgjTjX62Dkp7YaHFmkABXDSEK0qiR6l3orCoSximj1xgq4MA5jKRV/Q3G0/UqE5]"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#xD;&#xA;     distinct [SEASON]&#xD;&#xA;    from  [masterfile].[Products] a&#xD;&#xA;&#x9;left outer join data.D365_PriceCustomerGroups b on a.SEASON = b.SPLSEASONCODE&#xD;&#xA;where a.priceExtractDate is null and b.GROUPCODE is null&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.SQLSERVER_AdditionalParams"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="SEASON"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_5">
+      <column comment="" key="false" length="150" name="SEASON" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="// code sample:&#xA;//&#xA;// multiply by 2 the row identifier&#xA;// output_row.id = input_row.id * 2;&#xA;//&#xA;// lowercase the name&#xA;// output_row.name = input_row.name.toLowerCase();&#xA;if (context.error_PriceCustomerGroup == null)&#xA;{&#xA;context.error_PriceCustomerGroup = input_row.SEASON;&#xA;}&#xA;else&#xA;{&#xA;context.error_PriceCustomerGroup += &quot; &quot; + input_row.SEASON;&#xA;}&#xA;&#xA;System.out.println(context.error_PriceCustomerGroup);&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Price customer group not exists for season : &quot; + context.error_PriceCustomerGroup"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tSleep" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSleep_1" show="false"/>
+    <elementParameter field="TEXT" name="PAUSE" value="1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSleep_1"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tSleep_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_2" offsetLabelX="0" offsetLabelY="0" source="tFileExist_2" target="tFileDelete_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Boolean)globalMap.get(&quot;tFileExist_2_EXISTS&quot;))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSleep_1" offsetLabelX="0" offsetLabelY="0" source="tSleep_1" target="tDie_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.error_PriceCustomerGroup != null &amp;&amp; context.error_PriceCustomerGroup != &quot;&quot;"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_12" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSleep_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

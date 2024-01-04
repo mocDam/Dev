@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="FilePathToUpload" prompt="FilePathToUpload?" promptNeeded="false" type="id_String" value="&quot;c:/temp/OSG 122222_220000.CSV&quot;"/>
+    <contextParameter comment="" name="SharepointAuthenticationUrl" prompt="SharepointAuthenticationUrl?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;https://accounts.accesscontrol.windows.net/&quot;"/>
+    <contextParameter comment="" name="SharepointClientId" prompt="SharepointClientId?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[fHDT13AlS2xNYWno7AWqXdtMWCsIdzqR7GxnrMZK+Y5AcZCZOIAHl2OalanxwT/hdYmbox0sHE0n0U9aO/vwyC2dhphmFowURB+GDSU/9Z52qmDhCwG3KeOfHXC0YEEJWI+uAqQ=]"/>
+    <contextParameter comment="" name="SharepointDirectory" prompt="SharepointDirectory?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;Documents%20partages/Masterfile&quot;"/>
+    <contextParameter comment="" name="SharepointPostURL" prompt="SharepointPostURL?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;https://franckdjebiriconsulting.sharepoint.com/sites/canaldetest/&quot;"/>
+    <contextParameter comment="" name="SharepointResource" prompt="SharepointResource?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[wNTQ/HDvM2MRbOxBMv5ccsooHQQF0GgF41IQ07atFPg3BEhDndJwxBtrzsFU7KfPqy2FCXelh0OOQdPruc/8+fzB5Ifna+Z1Q2HKKCMl4/9jR9fPCV+fnYj4n1LXAUilO+kuL7vFPpds1+rwdaMquzJ0TBz5lXupmy91dNJKvvyIsDCDFXZdrgk4H0c=]"/>
+    <contextParameter comment="" name="SharepointSecretId" prompt="SharepointSecretId?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[MLlhIuMwkxQu43g+fOcVibWdKf4odygaQ6Cpfbnbxu6Vpauy6YXWA6O8Hr/i1fqarKMtg56xh61WOrf9vcuOXOFHvj2JTZXt]"/>
+    <contextParameter comment="" name="SharepointTenant" prompt="SharepointTenant?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[+a6uXLBayKTaUyFcx7QXK4BLb+lOtbqCczbMaUpOUi20EL9ewASj0OIAkYrpf00bVjGx5HVwu6oGivjRW/JrfA==]"/>
+    <contextParameter comment="" name="SharepointToken" prompt="SharepointToken?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBTest"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[U3Tj1m41/uctOs4Hg2Pz38NahUwhCKoVNN8/wFpPYmMViXf7HyjROuLYOobvGMLj]"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+  </context>
+  <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="FilePathToUpload" prompt="FilePathToUpload?" promptNeeded="false" type="id_String" value="&quot;c:/temp/OSG 122222_220000.CSV&quot;"/>
+    <contextParameter comment="" name="SharepointAuthenticationUrl" prompt="SharepointAuthenticationUrl?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;https://accounts.accesscontrol.windows.net/&quot;"/>
+    <contextParameter comment="" name="SharepointClientId" prompt="SharepointClientId?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[wM+QSvx92TKyDRP6UiSnCxVJrONwzmQ6jRwqICBNYRziqdIrUoew8N//YchJMHQ5BIehiUAQS3uylYPiDGu6DDSKScvxcyH6ijFukcPkzmMF8sr66IXT91MyK7kHZ3RrpwU1KV0=]"/>
+    <contextParameter comment="" name="SharepointDirectory" prompt="SharepointDirectory?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;Documents%20partages/Masterfile&quot;"/>
+    <contextParameter comment="" name="SharepointPostURL" prompt="SharepointPostURL?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;https://franckdjebiriconsulting.sharepoint.com/sites/canaldetest/&quot;"/>
+    <contextParameter comment="" name="SharepointResource" prompt="SharepointResource?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[ROxng6rui+Ao7A3uw69s/kVvsa9QGkTO/RLdtrwCwjdnWUHU5s/jRzKbl8LjI02LnjPRWB/kApsEVlJqsI56G86EKTWAeNmRioRbhLE9dyZOz1fdoy8iOTnlLPfVCZLALZpRmc/Cm7kX0DVthH1R4vHV9lrDTyhu3NzX9oni1WuP6SZsdRS2QNnZHaY=]"/>
+    <contextParameter comment="" name="SharepointSecretId" prompt="SharepointSecretId?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[/VtPNS4Dq5NSYYIGAdZ20xiTWLW7yawexAHl3e46Om+zAgRFt/z3fjYtGRHlPJkfnNRTGSNESMkAK8OUbFJj8zJYooC+3Mv2]"/>
+    <contextParameter comment="" name="SharepointTenant" prompt="SharepointTenant?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_Password" value="ENC:[ijlZ28qssaH614D6k5KDRnhbB4dKzfmEkMpwVgtgqJB0dAix3I13GKp9cI6QRNUo0F51rFdkMN9bxKt5wk1rgA==]"/>
+    <contextParameter comment="" name="SharepointToken" prompt="SharepointToken?" promptNeeded="false" repositoryContextId="_hJPc4KbzEe2MmZjXLGxbeg" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[Kr8/PI70ayXqnWwfQWtj/viDjD5H7zFkEsaOEjYKHTNaG1C2KxKCOPxqlQsMY9k3]"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBTestPreProd"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="ENC:[Jar/9awCwpEz6NfKglrgSqf9/gT6MBZkXawEQb/B]" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_ZHPb8C67Ee2a4e17fkL-sA" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tMSSqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="URL" value="" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.SQLSERVER_LOG_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.SQLSERVER_LOG_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SQLSERVER_LOG_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;ads_hbe_erp&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.SQLSERVER_LOG_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SQLSERVER_LOG_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.SQLSERVER_LOG_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ENC:[NBwIP0uYiio2VzgqhRYL4s/m2qZosm+jzfCKZMJy5ma4Cr3FUbYgBR3m10sdkeEYVXeEKhyV7B2eDQ==]"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;log&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_HCUpsOU_EeunwL7gj6SZaw" name="TalendString"/>
+    <routinesParameter id="_HCEyEOU_EeunwL7gj6SZaw" name="Numeric"/>
+    <routinesParameter id="_HCNU8OU_EeunwL7gj6SZaw" name="TalendDataGenerator"/>
+    <routinesParameter id="_HBp7UOU_EeunwL7gj6SZaw" name="DataOperation"/>
+    <routinesParameter id="_HCBHsOU_EeunwL7gj6SZaw" name="Mathematical"/>
+    <routinesParameter id="_HCQ_UOU_EeunwL7gj6SZaw" name="TalendDate"/>
+    <routinesParameter id="_HCH1YOU_EeunwL7gj6SZaw" name="Relational"/>
+    <routinesParameter id="_HCKRoOU_EeunwL7gj6SZaw" name="StringHandling"/>
+    <routinesParameter id="_HCYUEOU_EeunwL7gj6SZaw" name="TalendStringUtil"/>
+    <routinesParameter id="_zVQZEHVpEe22oLftd0GSqQ" name="TalendEmail"/>
+    <routinesParameter id="_U1qO8LpwEeynSaSDBA8KXw" name="SharedRecipient"/>
+    <routinesParameter id="_tw2UML_hEeyxRa_8JmmkpA" name="TalendUtils"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLibraryLoad_3" show="false"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;org.json.jar&quot;"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="org.json"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1952" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;End job&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="3"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="LABEL" value="End Job"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Start job&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="3"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="LABEL" value="Start Job"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_3"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//System.out.println(&quot;Authentification URL&quot;);&#xA;//System.out.println(context.Office365AuthenticationUrl + context.Office365Tenant);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Debug Logs"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1">
+      <column comment="" key="false" length="-1" name="access_token" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_4" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="// code sample:&#xA;//&#xA;// multiply by 2 the row identifier&#xA;// output_row.id = input_row.id * 2;&#xA;//&#xA;// lowercase the name&#xA;// output_row.name = input_row.name.toLowerCase();*&#xA;// TalendUtils(String sPath, String sFileName, String sharePointpostURL, String sharepointFolder, String sharepointToken, boolean isSharepoint )&#xA;&#xA;&#x9;TalendUtils talend = new TalendUtils((String)globalMap.get(&quot;Path&quot;) + &quot;/&quot; , (String)globalMap.get(&quot;FileNameToUpload&quot;), &#x9;&#x9;&#x9;&#x9;context.SharepointPostURL,context.SharepointDirectory , context.SharepointToken, true );&#xA;&#x9;&#xA;&#xA;&#x9;talend.callUploadSharepoint();&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_4">
+      <column comment="" key="false" length="-1" name="body" nullable="true" pattern="" precision="-1" sourceType="" type="id_byte[]" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;File attribute is not defined&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="File cannot be null"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_1" show="false"/>
+    <elementParameter field="FILE" name="FILE_NAME" value="context.FilePathToUpload"/>
+    <elementParameter field="TEXT" name="LABEL" value="File to upload exists ?"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_2" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;File not found&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="File not found"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_2"/>
+  </node>
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileProperties_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.FilePathToUpload"/>
+    <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileProperties_1">
+      <column defaultValue="" key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_5" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="// code sample:&#xA;//&#xA;// multiply by 2 the row identifier&#xA;// output_row.id = input_row.id * 2;&#xA;//&#xA;// lowercase the name&#xA;// output_row.name = input_row.name.toLowerCase();&#xA;&#xA;globalMap.put(&quot;FileNameToUpload&quot;,input_row.basename) ;&#xA;globalMap.put(&quot;Path&quot;,input_row.dirname) ;&#xA;System.out.println(((String)globalMap.get(&quot;FileNameToUpload&quot;)));&#xA;System.out.println(((String)globalMap.get(&quot;Path&quot;)));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="get File Name"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_5">
+      <column comment="" key="false" length="-1" name="access_token" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="GetTokenSharepoint"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="DEV:_KShWEKbuEe2MmZjXLGxbeg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="RADIO" name="USE_CHILD_JVM_SETTING" value="true" show="false"/>
+    <elementParameter field="RADIO" name="USE_CUSTOM_JVM_SETTING" value="false" show="false"/>
+    <elementParameter field="TABLE" name="JVM_ARGUMENTS" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Get Token for sharepoint"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_1">
+      <column comment="" key="false" length="-1" name="access_token" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;FROM CHILD JOB&quot;);&#xA;System.out.println(input_row.access_token);&#xA;context.SharepointToken = input_row.access_token;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="set Token"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="access_token" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;FileNameToUpload&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;Path&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="set log file and date error"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tWarn_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tLibraryLoad_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tLibraryLoad_3" target="tDie_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.FilePathToUpload == null || context.FilePathToUpload.equals(&quot;&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tLibraryLoad_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tLibraryLoad_3" target="tFileExist_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.FilePathToUpload != null &amp;&amp; ! context.FilePathToUpload.equals(&quot;&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tWarn_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tWarn_3" offsetLabelX="0" offsetLabelY="0" source="tWarn_3" target="tSetGlobalVar_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tJavaRow_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_1" target="tDie_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_1_EXISTS&quot;))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If6" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_1" target="tFileProperties_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Boolean)globalMap.get(&quot;tFileExist_1_EXISTS&quot;))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFileProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_1" target="tJavaRow_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_5" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_5" target="tRunJob_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tJava_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.SharepointToken !=  null"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tLibraryLoad_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLibraryLoad_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Post File"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileProperties_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="LastRunDate" prompt="LastRunDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="'^[a-z]'" name="fileType" prompt="fileType?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="asset_LastRunFile" prompt="asset_LastRunFile?" promptNeeded="false" type="id_String" value="Extract_Assets_CreatedLastRun"/>
+    <contextParameter comment="" name="tempAsset_LastRunFile" prompt="tempAsset_LastRunFile?" promptNeeded="false" type="id_String" value="Extract_Assets_CreatedLastRun.tmp"/>
+    <contextParameter comment="" name="File_Datetime" prompt="File_Datetime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="bynderDirectory" prompt="bynderDirectory?" promptNeeded="false" type="id_String" value="context.bynderDirectory"/>
+    <contextParameter comment="" name="bynderSubDirectory" prompt="bynderSubDirectory?" promptNeeded="false" type="id_String" value="context.bynderSubDirectory"/>
+    <contextParameter comment="" name="AssetFlag" prompt="AssetFlag?" promptNeeded="false" type="id_String" value="context.AssetFlag"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBTest"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[xb+MShhZI/qZ9JHOjGXtmzAwepmHMcgqOWFjvHG7NpCFdJMDrbCwuJnOCehDsiyP]"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+  </context>
+  <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="LastRunDate" prompt="LastRunDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="'^[a-z]'" name="fileType" prompt="fileType?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="asset_LastRunFile" prompt="asset_LastRunFile?" promptNeeded="false" type="id_String" value="Extract_Assets_CreatedLastRun"/>
+    <contextParameter comment="" name="tempAsset_LastRunFile" prompt="tempAsset_LastRunFile?" promptNeeded="false" type="id_String" value="Extract_Assets_CreatedLastRun.tmp"/>
+    <contextParameter comment="" name="File_Datetime" prompt="File_Datetime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="bynderDirectory" prompt="bynderDirectory?" promptNeeded="false" type="id_String" value="context.bynderDirectory"/>
+    <contextParameter comment="" name="bynderSubDirectory" prompt="bynderSubDirectory?" promptNeeded="false" type="id_String" value="context.bynderSubDirectory"/>
+    <contextParameter comment="" name="AssetFlag" prompt="AssetFlag?" promptNeeded="false" type="id_String" value="context.AssetFlag"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Schema" prompt="SQLSERVER_LOG_Schema?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talend"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_AdditionalParams" prompt="SQLSERVER_LOG_AdditionalParams?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value=""/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Server" prompt="SQLSERVER_LOG_Server?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Password" prompt="SQLSERVER_LOG_Password?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_Password" value="ENC:[rs4Zr2IblakLCkXoYmVc1HT3i/i51Q2HCdxTYYr7K1pcpXkbq0NJ2Zwpb9YcDjFm]"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Database" prompt="SQLSERVER_LOG_Database?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="TalendDBTestPreProd"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Port" prompt="SQLSERVER_LOG_Port?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SQLSERVER_LOG_Login" prompt="SQLSERVER_LOG_Login?" promptNeeded="false" repositoryContextId="_Q59sQHuNEe2qytsjsXWJPA" type="id_String" value="dbadmin"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="ENC:[VLnQ2TTxKaBfRMWaD8hPlcL2OCYRuMmycBtvqUFS]" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/TALEND/TOS_DI-20191031_1204-V7.3.1M3/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_ZHPb8C67Ee2a4e17fkL-sA" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tMSSqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="URL" value="" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.SQLSERVER_LOG_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.SQLSERVER_LOG_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SQLSERVER_LOG_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.SQLSERVER_LOG_Database" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.SQLSERVER_LOG_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SQLSERVER_LOG_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.SQLSERVER_LOG_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ENC:[j/LubSICS3Y7wzCbD+qBnXWMsoFmdZ1LuwFREguFXsv3dIdCmjM/m8ZIOj7RYgHgftuwFfUGaGZhDg==]"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;log&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_HBp7UOU_EeunwL7gj6SZaw" name="DataOperation"/>
+    <routinesParameter id="_HCNU8OU_EeunwL7gj6SZaw" name="TalendDataGenerator"/>
+    <routinesParameter id="_HCYUEOU_EeunwL7gj6SZaw" name="TalendStringUtil"/>
+    <routinesParameter id="_HCQ_UOU_EeunwL7gj6SZaw" name="TalendDate"/>
+    <routinesParameter id="_HCKRoOU_EeunwL7gj6SZaw" name="StringHandling"/>
+    <routinesParameter id="_HCUpsOU_EeunwL7gj6SZaw" name="TalendString"/>
+    <routinesParameter id="_HCBHsOU_EeunwL7gj6SZaw" name="Mathematical"/>
+    <routinesParameter id="_HCEyEOU_EeunwL7gj6SZaw" name="Numeric"/>
+    <routinesParameter id="_HCH1YOU_EeunwL7gj6SZaw" name="Relational"/>
+  </parameters>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.bynderSubDirectory"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES"/>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileProperties_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="(String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;)"/>
+    <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileProperties_1">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xA;&#xA;output_row.abs_path = input_row.abs_path; &#xA;output_row.dirname = input_row.dirname;&#xA;output_row.basename = input_row.basename;&#xA;output_row.mode_string = input_row.mode_string;&#xA;output_row.size = input_row.size;&#xA;output_row.mtime = input_row.mtime;&#xA;output_row.mtime_string = input_row.mtime_string;&#xA;output_row.File_Datetime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.parseDateLocale(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, output_row.mtime_string, &quot;EN&quot;));&#xA;&#xA;context.File_Datetime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.parseDateLocale(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, output_row.mtime_string, &quot;EN&quot;));&#xA;&#xA;System.out.println(&quot;abs_path   &quot; + output_row.abs_path );&#xA;System.out.println(&quot;dirname   &quot; + output_row.dirname );&#xA;System.out.println(&quot;basename   &quot; + output_row.basename );&#xA;System.out.println(&quot;mode_string   &quot; + output_row.mode_string );&#xA;System.out.println(&quot;size   &quot; + output_row.size );&#xA;System.out.println(&quot;mtime   &quot; + output_row.mtime );&#xA;System.out.println(&quot;mtime_string   &quot; + output_row.mtime_string );&#xA;System.out.println(&quot;File_Datetime   &quot; + output_row.File_Datetime );&#xA;System.out.println(&quot;context.File_Datetime   &quot; + context.File_Datetime );&#xA;&#xA;&#xA;System.out.println(&quot;StringHandling.STYLE   &quot; + StringHandling.LEFT(output_row.basename,6) );&#xA;System.out.println(&quot;StringHandling.COLOR   &quot; + StringHandling.RIGHT(StringHandling.LEFT(output_row.basename,10),3) );&#xA;&#xA;&#xA;System.out.println(&quot;StringHandling.Ext   &quot; + row1.basename.substring(row1.basename.indexOf(&quot;.&quot;) + 1 ,  StringHandling.LEN(row1.basename)) );&#xA;&#xA;/*&#xA;int CompareDateRes = TalendDate.compareDate(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.File_Datetime ), TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.LastRunDate ));&#xA;&#xA;System.out.println(&quot; CompareDateRes   : &quot; + CompareDateRes );&#xA;&#xA;*/"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_jI4LkMRMEeuOsvnmXEancg-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="output" name="output">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NewAssetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileExtenstion" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="var1" expression="row1.basename " type="id_String"/>
+        <mapperTableEntries name="Style_Code" expression="StringHandling.LEFT(row1.basename,6) " type="id_String"/>
+        <mapperTableEntries name="Color_Code" expression="StringHandling.RIGHT(StringHandling.LEFT(row1.basename,10),3) " type="id_String"/>
+        <mapperTableEntries name="FileExtenstion" expression="row1.basename.substring(row1.basename.indexOf(&quot;.&quot;) ,  StringHandling.LEN(row1.basename)) " type="id_String"/>
+      </varTables>
+      <outputTables sizeState="INTERMEDIATE" name="output">
+        <mapperTableEntries name="abs_path" expression="row1.abs_path " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dirname" expression="row1.dirname " type="id_String" nullable="true"/>
+        <mapperTableEntries name="basename" expression="row1.basename " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mode_string" expression="row1.mode_string " type="id_String" nullable="true"/>
+        <mapperTableEntries name="size" expression="row1.size " type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime" expression="row1.mtime " type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime_string" expression="row1.mtime_string " type="id_String" nullable="true"/>
+        <mapperTableEntries name="File_Datetime" expression="row1.File_Datetime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NewAssetName" expression="Var.Style_Code + &quot;-&quot; +  Var.Color_Code + context.AssetFlag" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FileExtenstion" expression="Var.FileExtenstion " type="id_String"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="abs_path" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dirname" type="id_String" nullable="true"/>
+        <mapperTableEntries name="basename" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mode_string" type="id_String" nullable="true"/>
+        <mapperTableEntries name="size" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime_string" type="id_String" nullable="true"/>
+        <mapperTableEntries name="File_Datetime" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.bynderSubDirectory +output.basename "/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/public/_999_programs/talend/TOS_DI-20191031_1204-V7.3.1M3/workspace&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.bynderDirectory + &quot;/image/&quot;"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="output.NewAssetName + output.FileExtenstion"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="output" name="tFileCopy_1">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NewAssetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileExtenstion" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String AssetFlag = context.AssetFlag;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.bynderSubDirectory"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;*.png&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*.jpg&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*.jpeg&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileProperties_2" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="(String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)"/>
+    <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileProperties_2">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xA;&#xA;&#xA;output_row.abs_path = input_row.abs_path; &#xA;output_row.dirname = input_row.dirname;&#xA;output_row.basename = input_row.basename;&#xA;output_row.mode_string = input_row.mode_string;&#xA;output_row.size = input_row.size;&#xA;output_row.mtime = input_row.mtime;&#xA;output_row.mtime_string = input_row.mtime_string;&#xA;output_row.File_Datetime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.parseDateLocale(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, output_row.mtime_string, &quot;EN&quot;));&#xA;&#xA;context.File_Datetime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.parseDateLocale(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, output_row.mtime_string, &quot;EN&quot;));&#xA;&#xA;&#xA;System.out.println(&quot;StyleColor   &quot; + output_row.StyleColor  );&#xA;&#xA;if (StringHandling.INDEX(output_row.basename,&quot;PLV&quot;) > 0)&#xA;{&#xA;&#x9;output_row.StyleColor = StringHandling.LEFT(output_row.basename,StringHandling.INDEX(output_row.basename,&quot;PLV&quot;)-1) + &quot;-PLV&quot; ;&#xA;&#x9;&#xA;}&#xA;else&#xA;{&#xA;&#x9;&#xA;output_row.StyleColor = StringHandling.LEFT(output_row.basename,6) + &quot;-&quot; + StringHandling.RIGHT(StringHandling.LEFT(output_row.basename,10),3);&#xA;&#x9;&#xA;}"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_2">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="StyleColor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_jI4LkMRMEeuOsvnmXEancg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="output" name="copyOfoutput">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NewAssetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileExtenstion" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="StyleColor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="var1" expression="row4.basename " type="id_String"/>
+        <mapperTableEntries name="Style_Code" expression="StringHandling.INDEX(row4.basename,&quot;PLV&quot;) > 0 ? StringHandling.LEFT(row4.basename,StringHandling.INDEX(row4.basename,&quot;PLV&quot;)-1) : StringHandling.LEFT(row4.basename,6) " type="id_String"/>
+        <mapperTableEntries name="Color_Code" expression="StringHandling.INDEX(row4.basename,&quot;PLV&quot;) > 0 ? &quot;PLV&quot; : StringHandling.RIGHT(StringHandling.LEFT(row4.basename,10),3) " type="id_String"/>
+        <mapperTableEntries name="FileExtenstion" expression="row4.basename.substring(row4.basename.indexOf(&quot;.&quot;) ,  StringHandling.LEN(row4.basename)) " type="id_String"/>
+      </varTables>
+      <outputTables sizeState="INTERMEDIATE" name="copyOfoutput" expressionFilter="Relational.NOT(Var.FileExtenstion.equals(&quot;CSV&quot;) || Var.FileExtenstion.equals(&quot;csv&quot;))" activateExpressionFilter="true" columnNameFilter="">
+        <mapperTableEntries name="abs_path" expression="row4.abs_path " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dirname" expression="row4.dirname " type="id_String" nullable="true"/>
+        <mapperTableEntries name="basename" expression="row4.basename " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mode_string" expression="row4.mode_string " type="id_String" nullable="true"/>
+        <mapperTableEntries name="size" expression="row4.size " type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime" expression="row4.mtime " type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime_string" expression="row4.mtime_string " type="id_String" nullable="true"/>
+        <mapperTableEntries name="File_Datetime" expression="row4.File_Datetime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NewAssetName" expression="Var.Style_Code + &quot;-&quot; +  Var.Color_Code + context.AssetFlag" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FileExtenstion" expression="Var.FileExtenstion " type="id_String"/>
+        <mapperTableEntries name="StyleColor" expression="row4.StyleColor  " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="StringHandling.RIGHT(row4.basename.substring(0 , row4.basename.indexOf(&quot;.&quot;)),2).equals(context.AssetFlag)" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="abs_path" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dirname" type="id_String" nullable="true"/>
+        <mapperTableEntries name="basename" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mode_string" type="id_String" nullable="true"/>
+        <mapperTableEntries name="size" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime_string" type="id_String" nullable="true"/>
+        <mapperTableEntries name="File_Datetime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="StyleColor" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.bynderSubDirectory + copyOfoutput.basename "/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/public/_999_programs/talend/TOS_DI-20191031_1204-V7.3.1M3/workspace&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.bynderDirectory + &quot;/image/temp/&quot;"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="copyOfoutput.NewAssetName + copyOfoutput.FileExtenstion"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="output" name="tFileCopy_2">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NewAssetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileExtenstion" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="StyleColor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_3" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.bynderSubDirectory"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;*.png&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*.jpg&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*.jpeg&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileProperties_3" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="(String)globalMap.get(&quot;tFileList_3_CURRENT_FILEPATH&quot;)"/>
+    <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileProperties_3">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_4" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xA;&#xA;&#xA;output_row.abs_path = input_row.abs_path; &#xA;output_row.dirname = input_row.dirname;&#xA;output_row.basename = input_row.basename;&#xA;output_row.mode_string = input_row.mode_string;&#xA;output_row.size = input_row.size;&#xA;output_row.mtime = input_row.mtime;&#xA;output_row.mtime_string = input_row.mtime_string;&#xA;output_row.File_Datetime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.parseDateLocale(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, output_row.mtime_string, &quot;EN&quot;));&#xA;&#xA;context.File_Datetime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.parseDateLocale(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;, output_row.mtime_string, &quot;EN&quot;));&#xA;&#xA;output_row.StyleColor = StringHandling.LEFT(output_row.basename,6) + &quot;-&quot; + StringHandling.RIGHT(StringHandling.LEFT(output_row.basename,10),3);&#xA;&#xA;output_row.AssetFlag = context.AssetFlag;&#xA;&#xA;if ( globalMap.containsKey(output_row.StyleColor) ){&#xA;&#x9;globalMap.put(output_row.StyleColor , (Integer)globalMap.get(output_row.StyleColor) + 1 );&#xA;&#x9;&#xA;&#x9;output_row.AssetSuffix =  &quot;&quot; + (Integer)globalMap.get(output_row.StyleColor) ;&#xA;&#xA;}else{&#xA;&#xA;&#x9;output_row.AssetSuffix = &quot;1&quot; ;&#xA;&#x9;globalMap.put(output_row.StyleColor , 1 );&#xA;&#xA;}&#xA;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_4">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="StyleColor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AssetSuffix" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AssetFlag" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_jI4LkMRMEeuOsvnmXEancg-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="output" name="copyOfoutput_0">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NewAssetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileExtenstion" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="StyleColor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AssetSuffix" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="var1" expression="row7.basename " type="id_String"/>
+        <mapperTableEntries name="Style_Code" expression="StringHandling.LEFT(row7.basename,6) " type="id_String"/>
+        <mapperTableEntries name="Color_Code" expression="StringHandling.RIGHT(StringHandling.LEFT(row7.basename,10),3) " type="id_String"/>
+        <mapperTableEntries name="FileExtenstion" expression="row7.basename.substring(row7.basename.indexOf(&quot;.&quot;) ,  StringHandling.LEN(row7.basename)) " type="id_String"/>
+      </varTables>
+      <outputTables sizeState="INTERMEDIATE" name="copyOfoutput_0" expressionFilter="Relational.NOT(Var.FileExtenstion.equals(&quot;CSV&quot;) || Var.FileExtenstion.equals(&quot;csv&quot;))" activateExpressionFilter="true" columnNameFilter="">
+        <mapperTableEntries name="abs_path" expression="row7.abs_path " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dirname" expression="row7.dirname " type="id_String" nullable="true"/>
+        <mapperTableEntries name="basename" expression="row7.basename " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mode_string" expression="row7.mode_string " type="id_String" nullable="true"/>
+        <mapperTableEntries name="size" expression="row7.size " type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime" expression="row7.mtime " type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime_string" expression="row7.mtime_string " type="id_String" nullable="true"/>
+        <mapperTableEntries name="File_Datetime" expression="row7.File_Datetime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NewAssetName" expression="Var.Style_Code + &quot;-&quot; +  Var.Color_Code + context.AssetFlag + row7.AssetSuffix" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FileExtenstion" expression="Var.FileExtenstion " type="id_String"/>
+        <mapperTableEntries name="StyleColor" expression="row7.StyleColor  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="AssetSuffix" expression="row7.AssetSuffix " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row7" expressionFilter="Relational.NOT(StringHandling.RIGHT(row7.basename.substring(0 , row7.basename.indexOf(&quot;.&quot;)),2).equals(&quot;_D&quot;))" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="abs_path" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dirname" type="id_String" nullable="true"/>
+        <mapperTableEntries name="basename" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mode_string" type="id_String" nullable="true"/>
+        <mapperTableEntries name="size" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="mtime_string" type="id_String" nullable="true"/>
+        <mapperTableEntries name="File_Datetime" type="id_String" nullable="true"/>
+        <mapperTableEntries name="StyleColor" type="id_String" nullable="true"/>
+        <mapperTableEntries name="AssetSuffix" type="id_String" nullable="true"/>
+        <mapperTableEntries name="AssetFlag" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_3" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.bynderSubDirectory + copyOfoutput_0.basename "/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/public/_999_programs/talend/TOS_DI-20191031_1204-V7.3.1M3/workspace&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.bynderDirectory + &quot;/image/temp/&quot;"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="copyOfoutput_0.NewAssetName + copyOfoutput_0.FileExtenstion"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="output" name="tFileCopy_3">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="File_Datetime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NewAssetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileExtenstion" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="StyleColor" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AssetSuffix" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileProperties_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="File_Datetime"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="output" lineStyle="0" metaname="output" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tFileCopy_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="FileExtenstion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="output" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tJava_1" target="tFileList_3">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="StringHandling.RIGHT(context.AssetFlag,2).equals(&quot;_D&quot;) "/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJava_1" target="tFileList_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="StringHandling.RIGHT(context.AssetFlag,2).equals(&quot;_F&quot;) || StringHandling.RIGHT(context.AssetFlag,2).equals(&quot;_B&quot;) || StringHandling.RIGHT(context.AssetFlag,2).equals(&quot;_L&quot;) || StringHandling.RIGHT(context.AssetFlag,2).equals(&quot;_R&quot;) "/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileProperties_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileProperties_2" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_2" target="tJavaRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tMap_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="File_Datetime"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StyleColor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetSuffix"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetFlag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfoutput" lineStyle="0" metaname="copyOfoutput" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileCopy_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="FileExtenstion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EANCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StyleColor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetSuffix"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetFlag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfoutput" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tFileProperties_3">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFileProperties_3" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_3" target="tJavaRow_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="File_Datetime"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StyleColor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetSuffix"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetFlag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfoutput_0" lineStyle="0" metaname="copyOfoutput_0" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tFileCopy_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="FileExtenstion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EANCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StyleColor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AssetSuffix"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfoutput_0" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="COLLAPSED" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

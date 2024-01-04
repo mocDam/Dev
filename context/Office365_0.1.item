@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_58000HYrEe2608q92GB2Lg" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_59Su4HYrEe2608q92GB2Lg" comment="" name="Office365ClientId" prompt="Office365ClientId?" promptNeeded="false" type="id_Password" value="ENC:[ElpjzNlw9U0Mk6tV1hPqQvOCsXEf98dSjx5h3JHIvquoOnvXVGFR4BKPDZycf2zHQyn7JNRQkiNfIArWc8Xerw==]"/>
+  <contextParameter xmi:id="_63MyYHYrEe2608q92GB2Lg" comment="" name="Office365SecretId" prompt="Office365SecretId?" promptNeeded="false" type="id_Password" value="ENC:[E17mXxgrAsGzmYhQH2OFKosXhdKJuGst+n7MC/AJWD5CaNKscsNgpHhWeTeBGP6fnRjkFOqf1maixR7PiWf7FMR20nQ=]"/>
+  <contextParameter xmi:id="_7fFRwHYrEe2608q92GB2Lg" comment="" name="Office365AuthenticationUrl" prompt="Office365AuthenticationUrl?" promptNeeded="false" type="id_String" value="&quot;https://login.microsoftonline.com/&quot;"/>
+  <contextParameter xmi:id="_8E8X4HYrEe2608q92GB2Lg" comment="" name="Office365SendMailUrl" prompt="Office365SendMailUrl?" promptNeeded="false" type="id_String" value="&quot;https://graph.microsoft.com/v1.0/users/&quot;"/>
+  <contextParameter xmi:id="_9GiXwHYrEe2608q92GB2Lg" comment="" name="Office365Tenant" prompt="Office365Tenant?" promptNeeded="false" type="id_Password" value="ENC:[3ksF0Q9dZ9n8iCgRwygYOb0GAG+/yfGndF9D1K4AtdAuhRVQzknOJjUNz7KAogiHu7bVC5UMS37B364AxjAhEw==]"/>
+  <contextParameter xmi:id="_-9QBwHYrEe2608q92GB2Lg" comment="" name="Office365Token" prompt="Office365Token?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  <contextParameter xmi:id="_OxtaMHZGEe2608q92GB2Lg" comment="" name="FromAddress" prompt="FromAddress?" promptNeeded="false" type="id_String" value="&quot;talend.mail@suncityisi.onmicrosoft.com&quot;"/>
+</talendfile:ContextType>

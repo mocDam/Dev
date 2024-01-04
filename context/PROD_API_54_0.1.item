@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_XIUj8OvaEeyHwfpHGmx8IQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_XIUj8evaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_loginType" prompt="PROD_API_54_loginType?" promptNeeded="false" type="id_String" value="Basic"/>
+  <contextParameter xmi:id="_XIUj8uvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_timeout" prompt="PROD_API_54_timeout?" promptNeeded="false" type="id_Integer" value="60000"/>
+  <contextParameter xmi:id="_XIUj8-vaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_audience" prompt="PROD_API_54_oauth2JwtFlow_audience?" promptNeeded="false" type="id_String" value="https://login.salesforce.com"/>
+  <contextParameter xmi:id="_XIUj9OvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_userPassword_userId" prompt="PROD_API_54_userPassword_userId?" promptNeeded="false" type="id_String" value="systemuser@haddadeurope.com"/>
+  <contextParameter xmi:id="_XIUj9evaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_keyStore" prompt="PROD_API_54_oauth2JwtFlow_keyStore?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUj9uvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth_clientId" prompt="PROD_API_54_oauth_clientId?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUj9-vaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_sessionDirectory" prompt="PROD_API_54_sessionDirectory?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUj-OvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_issuer" prompt="PROD_API_54_oauth2JwtFlow_issuer?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUj-evaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_proxy_port" prompt="PROD_API_54_proxy_port?" promptNeeded="false" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_XIUj-uvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth_tokenFile" prompt="PROD_API_54_oauth_tokenFile?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUj--vaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth_clientSecret" prompt="PROD_API_54_oauth_clientSecret?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_XIUj_OvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_userPassword_securityKey" prompt="PROD_API_54_userPassword_securityKey?" promptNeeded="false" type="id_Password" value="ENC:[8UcQX/oyUGCSKNqwAbVyKoPPP2VhX0L4pH6Zxcq5DBbpFEaLfsG27CvR5BH2BAo6JEuda1Q=]"/>
+  <contextParameter xmi:id="_XIUj_evaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_subject" prompt="PROD_API_54_oauth2JwtFlow_subject?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUj_uvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_endpoint" prompt="PROD_API_54_endpoint?" promptNeeded="false" type="id_String" value="https://login.salesforce.com/services/Soap/u/54.0"/>
+  <contextParameter xmi:id="_XIUj_-vaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth_callbackPort" prompt="PROD_API_54_oauth_callbackPort?" promptNeeded="false" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_XIUkAOvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_proxy_userPassword_userId" prompt="PROD_API_54_proxy_userPassword_userId?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUkAevaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_certificateAlias" prompt="PROD_API_54_oauth2JwtFlow_certificateAlias?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUkAuvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_apiVersion" prompt="PROD_API_54_apiVersion?" promptNeeded="false" type="id_String" value="45.0"/>
+  <contextParameter xmi:id="_XIUkA-vaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_userPassword_password" prompt="PROD_API_54_userPassword_password?" promptNeeded="false" type="id_Password" value="ENC:[LCZCo5OTXda6jjUCafybeTgAP9buiwMOorO8DpMMiC5TQJE27Ehpjy25Iyac]"/>
+  <contextParameter xmi:id="_XIUkBOvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_proxy_host" prompt="PROD_API_54_proxy_host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUkBevaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2FlowType" prompt="PROD_API_54_oauth2FlowType?" promptNeeded="false" type="id_String" value="JWT_Flow"/>
+  <contextParameter xmi:id="_XIUkBuvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_expirationTime" prompt="PROD_API_54_oauth2JwtFlow_expirationTime?" promptNeeded="false" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_XIUkB-vaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth2JwtFlow_keyStorePassword" prompt="PROD_API_54_oauth2JwtFlow_keyStorePassword?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_XIUkCOvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_oauth_callbackHost" prompt="PROD_API_54_oauth_callbackHost?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_XIUkCevaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_proxy_userPassword_password" prompt="PROD_API_54_proxy_userPassword_password?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_XIUkCuvaEeyHwfpHGmx8IQ" comment="" name="PROD_API_54_clientId" prompt="PROD_API_54_clientId?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>

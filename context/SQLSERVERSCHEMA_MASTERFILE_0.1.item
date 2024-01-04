@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_ICVYsJGQEe2arJbsxW9OIg" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_ICVYsZGQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Port" prompt="SQLSERVERSCHEMA_MASTERFILE_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_ICVYspGQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Server" prompt="SQLSERVERSCHEMA_MASTERFILE_Server?" promptNeeded="false" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter xmi:id="_ICVYs5GQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Database" prompt="SQLSERVERSCHEMA_MASTERFILE_Database?" promptNeeded="false" type="id_String" value="TalendDBTest"/>
+    <contextParameter xmi:id="_ICVYtJGQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_AdditionalParams" prompt="SQLSERVERSCHEMA_MASTERFILE_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ICVYtZGQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Schema" prompt="SQLSERVERSCHEMA_MASTERFILE_Schema?" promptNeeded="false" type="id_String" value="masterfile"/>
+    <contextParameter xmi:id="_ICVYtpGQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Password" prompt="SQLSERVERSCHEMA_MASTERFILE_Password?" promptNeeded="false" type="id_Password" value="ENC:[bvAMf+Gqm3QB6owuvTvcW+bXwA8/d1eHDwPYsxZbE8hiZ1wRQ8SzSPUzQ8+bmbil]"/>
+    <contextParameter xmi:id="_ICVYt5GQEe2arJbsxW9OIg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Login" prompt="SQLSERVERSCHEMA_MASTERFILE_Login?" promptNeeded="false" type="id_String" value="dbadmin"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_ajugMNOPEe2MyrD0EYklFg" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_ajugMdOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Port" prompt="SQLSERVERSCHEMA_MASTERFILE_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_ajugMtOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Server" prompt="SQLSERVERSCHEMA_MASTERFILE_Server?" promptNeeded="false" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter xmi:id="_ajugM9OPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Database" prompt="SQLSERVERSCHEMA_MASTERFILE_Database?" promptNeeded="false" type="id_String" value="TalendDBTestPreProd"/>
+    <contextParameter xmi:id="_ajugNNOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_AdditionalParams" prompt="SQLSERVERSCHEMA_MASTERFILE_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ajugNdOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Schema" prompt="SQLSERVERSCHEMA_MASTERFILE_Schema?" promptNeeded="false" type="id_String" value="masterfile"/>
+    <contextParameter xmi:id="_ajugNtOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Password" prompt="SQLSERVERSCHEMA_MASTERFILE_Password?" promptNeeded="false" type="id_Password" value="ENC:[f5ZWorf2PEBzwdo9G7wqE4t87tUJZeMABADwQ4xvbIsqKq3/VaExtbPunvWZQyRq]"/>
+    <contextParameter xmi:id="_ajugN9OPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Login" prompt="SQLSERVERSCHEMA_MASTERFILE_Login?" promptNeeded="false" type="id_String" value="dbadmin"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_ajugONOPEe2MyrD0EYklFg" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_ajugOdOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Port" prompt="SQLSERVERSCHEMA_MASTERFILE_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_ajugOtOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Server" prompt="SQLSERVERSCHEMA_MASTERFILE_Server?" promptNeeded="false" type="id_String" value="talendserver.database.windows.net"/>
+    <contextParameter xmi:id="_ajugO9OPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Database" prompt="SQLSERVERSCHEMA_MASTERFILE_Database?" promptNeeded="false" type="id_String" value="TalendDBProduction"/>
+    <contextParameter xmi:id="_ajugPNOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_AdditionalParams" prompt="SQLSERVERSCHEMA_MASTERFILE_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ajugPdOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Schema" prompt="SQLSERVERSCHEMA_MASTERFILE_Schema?" promptNeeded="false" type="id_String" value="masterfile"/>
+    <contextParameter xmi:id="_ajugPtOPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Password" prompt="SQLSERVERSCHEMA_MASTERFILE_Password?" promptNeeded="false" type="id_Password" value="ENC:[oWBg/u7zmnhZ7Arc5YJEDxR/z3iDz4e0KSIfGG0D/Nbgztodybd374YGMKhQSkx9]"/>
+    <contextParameter xmi:id="_ajugP9OPEe2MyrD0EYklFg" comment="" name="SQLSERVERSCHEMA_MASTERFILE_Login" prompt="SQLSERVERSCHEMA_MASTERFILE_Login?" promptNeeded="false" type="id_String" value="dbadmin"/>
+  </talendfile:ContextType>
+</xmi:XMI>

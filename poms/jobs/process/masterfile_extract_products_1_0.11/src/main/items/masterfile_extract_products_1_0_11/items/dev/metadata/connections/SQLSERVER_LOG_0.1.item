@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_ZHt9EC67Ee2a4e17fkL-sA" name="SQLSERVER_LOG" id="_ZHPb8C67Ee2a4e17fkL-sA" label="SQLSERVER_LOG" dataPackage="_RJrjQHuNEe2qytsjsXWJPA" ContextMode="true" ContextId="_Q59sQHuNEe2qytsjsXWJPA" contextName="Default" DatabaseType="Microsoft SQL Server" DriverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" URL="jdbc:sqlserver://talendserver.database.windows.net:1433;DatabaseName=TalendDBTest;" dbVersionString="MSSQL_PROP" Port="context.SQLSERVER_LOG_Port" Username="context.SQLSERVER_LOG_Login" Password="context.SQLSERVER_LOG_Password" ServerName="context.SQLSERVER_LOG_Server" DatasourceName="" FileFieldName="" SID="context.SQLSERVER_LOG_Database" SqlSynthax="" StringQuote="" NullChar="" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="context.SQLSERVER_LOG_AdditionalParams" StandardSQL="true" SQLMode="false" UiSchema="context.SQLSERVER_LOG_Schema">
+    <taggedValue xmi:id="_GA3DsFN_EeyhTqsR4Xgvrw" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_GCUcQFN_EeyhTqsR4Xgvrw" tag="package filter" value=""/>
+    <taggedValue xmi:id="_GCfbYFN_EeyhTqsR4Xgvrw" tag="Status" value=""/>
+    <taggedValue xmi:id="_GCfbYVN_EeyhTqsR4Xgvrw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GCfbYlN_EeyhTqsR4Xgvrw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_GCfbY1N_EeyhTqsR4Xgvrw" tag="Description" value=""/>
+    <taggedValue xmi:id="_GCfbZFN_EeyhTqsR4Xgvrw" tag="Author" value=""/>
+    <taggedValue xmi:id="_GCfbZVN_EeyhTqsR4Xgvrw" tag="otherParameter"/>
+    <taggedValue xmi:id="_4G7C8FN_EeyhTqsR4Xgvrw" tag="DB ProductName" value="Microsoft SQL Server"/>
+    <taggedValue xmi:id="_4G7C8VN_EeyhTqsR4Xgvrw" tag="DB ProductVersion" value="12.00.816"/>
+    <taggedValue xmi:id="_4G7C8lN_EeyhTqsR4Xgvrw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_GA3DsVN_EeyhTqsR4Xgvrw" key="CONN_PARA_KEY_USERNAME" value="context.SQLSERVER_LOG_Login"/>
+    <parameters xmi:id="_XUd5gFN_EeyhTqsR4Xgvrw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_RJrjQHuNEe2qytsjsXWJPA" name="TalendDBTest" dataManager="_ZHt9EC67Ee2a4e17fkL-sA">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_RJrjQXuNEe2qytsjsXWJPA" name="talend"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

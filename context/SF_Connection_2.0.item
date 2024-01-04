@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_UUuhgGNPEeyimOYHAX85IA" confirmationNeeded="false" name="Full">
+    <contextParameter xmi:id="_UUuhgWNPEeyimOYHAX85IA" comment="" name="SalesForceURL" prompt="Please enter SalesForce login URL?" promptNeeded="true" type="id_String" value="&quot;https://test.salesforce.com&quot;"/>
+    <contextParameter xmi:id="_UUuhgmNPEeyimOYHAX85IA" comment="" name="SalesForceUsername" prompt="Please enter SalesForce username?" promptNeeded="true" type="id_String" value="&quot;slombard@b-wizz-u.com.full&quot;"/>
+    <contextParameter xmi:id="_UUuhg2NPEeyimOYHAX85IA" comment="" name="SalesForcePassword" prompt="Please enter SalesForce password?" promptNeeded="true" type="id_String" value="&quot;mgxZ9A7FNtsgD2z&quot;"/>
+    <contextParameter xmi:id="_UUuhhGNPEeyimOYHAX85IA" comment="" name="SalesForceToken" prompt="Please enter SalesForceToken?" promptNeeded="true" type="id_String" value="&quot;1sE4phzLMs5dxxIoj4mJspSG&quot;"/>
+    <contextParameter xmi:id="_UUuhhWNPEeyimOYHAX85IA" comment="" name="SalesforceOrderRT" prompt="Order Record Type?" promptNeeded="false" type="id_String" value="&quot;0122p0000003kGyAAI&quot;"/>
+    <contextParameter xmi:id="_UUuhhmNPEeyimOYHAX85IA" comment="" name="SalesForceClientId" prompt="SalesForceClientId?" promptNeeded="false" type="id_String" value="&quot;3MVG9GXbtnGKjXe5n_YlYTCJSxC80Mh.pdK2TlZwTZknXoAo5oUSItauehcMrUT2OzKOb40.4Hrv.rTz.pfgy&quot;"/>
+    <contextParameter xmi:id="_UUuhh2NPEeyimOYHAX85IA" comment="" name="SalesForceClientSecret" prompt="SalesForceClientSecret?" promptNeeded="false" type="id_String" value="&quot;2E72638A1DCAE016D244025CD528649FC7712CDDE9EF4FED476E5B298AA95B34&quot;"/>
+    <contextParameter xmi:id="_UUuhiGNPEeyimOYHAX85IA" comment="" name="SalesForceOAuthToken" prompt="SalesForce OAuth Token?" promptNeeded="true" type="id_String" value="&quot;00D1x0000001Osw!AQQAQPUEL1xlWhqGgiR1iQRcmYFxl4xq3laA8Qj_m.dMkcOtVGbWRmYl4l2jIOcFGjBGYsIYDsidldqi3Jjoaam4k3XOHa7Q&quot;"/>
+    <contextParameter xmi:id="_UUuhiWNPEeyimOYHAX85IA" comment="" name="SalesforceApiVersion" prompt="SalesforceApiVersion?" promptNeeded="false" type="id_String" value="&quot;52.0&quot;"/>
+    <contextParameter xmi:id="_UUuhimNPEeyimOYHAX85IA" comment="" name="SalesforceMyDomainUrl" prompt="SalesforceMyDomainUrl?" promptNeeded="false" type="id_String" value="&quot;https://haddad-europe--full.my.salesforce.com&quot;"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_UUuhi2NPEeyimOYHAX85IA" confirmationNeeded="false" name="Production">
+    <contextParameter xmi:id="_UUuhjGNPEeyimOYHAX85IA" comment="" name="SalesForceURL" prompt="Please enter SalesForce login URL?" promptNeeded="true" type="id_String" value="&quot;https://login.salesforce.com&quot;"/>
+    <contextParameter xmi:id="_UUuhjWNPEeyimOYHAX85IA" comment="" name="SalesForceUsername" prompt="Please enter SalesForce username?" promptNeeded="true" type="id_String" value="&quot;slombard@b-wizz-u.com&quot;"/>
+    <contextParameter xmi:id="_UUuhjmNPEeyimOYHAX85IA" comment="" name="SalesForcePassword" prompt="Please enter SalesForce password?" promptNeeded="true" type="id_String" value="&quot;UP5sgJkAZ6RSyQa&quot;"/>
+    <contextParameter xmi:id="_UUuhj2NPEeyimOYHAX85IA" comment="" name="SalesForceToken" prompt="Please enter SalesForceToken?" promptNeeded="true" type="id_String" value="&quot;SluqJbvmhHJYFoAg2nVj8tVU&quot;"/>
+    <contextParameter xmi:id="_UUuhkGNPEeyimOYHAX85IA" comment="" name="SalesforceOrderRT" prompt="Order Record Type?" promptNeeded="false" type="id_String" value="&quot;0122p0000003kGyAAI&quot;"/>
+    <contextParameter xmi:id="_UUuhkWNPEeyimOYHAX85IA" comment="" name="SalesForceClientId" prompt="SalesForceClientId?" promptNeeded="false" type="id_String" value="&quot;3MVG96_7YM2sI9wSE9pMdf5F3u_wWD6RXjrKIQe8pUn8Y_enfE01fv4jQNBMMaZNZTOVPuyMjkE75Vx5u951I&quot;"/>
+    <contextParameter xmi:id="_UUuhkmNPEeyimOYHAX85IA" comment="" name="SalesForceClientSecret" prompt="SalesForceClientSecret?" promptNeeded="false" type="id_String" value="&quot;5634E72A45A7758C7541FC4CDD293CAA849112CB0520A8F82B7408E88CAA96FD&quot;"/>
+    <contextParameter xmi:id="_UUuhk2NPEeyimOYHAX85IA" comment="" name="SalesForceOAuthToken" prompt="SalesForce OAuth Token?" promptNeeded="true" type="id_String" value="&quot;00D1x0000001Osw!AQQAQPUEL1xlWhqGgiR1iQRcmYFxl4xq3laA8Qj_m.dMkcOtVGbWRmYl4l2jIOcFGjBGYsIYDsidldqi3Jjoaam4k3XOHa7Q&quot;"/>
+    <contextParameter xmi:id="_UUuhlGNPEeyimOYHAX85IA" comment="" name="SalesforceApiVersion" prompt="SalesforceApiVersion?" promptNeeded="false" type="id_String" value="&quot;52.0&quot;"/>
+    <contextParameter xmi:id="_UUuhlWNPEeyimOYHAX85IA" comment="" name="SalesforceMyDomainUrl" prompt="SalesforceMyDomainUrl?" promptNeeded="false" type="id_String" value="&quot;https://haddad-europe.my.salesforce.com&quot;"/>
+  </talendfile:ContextType>
+</xmi:XMI>

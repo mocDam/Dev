@@ -1,0 +1,3 @@
+%~d0
+cd %~dp0
+java -Dtalend.component.manager.m2.repository="%cd%/../lib" -Xms256M -Xmx1024M -Xmx3048M -Xmx4096M -Dmail.smtp.ssl.protocols=TLSv1.2 -Dfile.encoding=UTF-8 -cp .;../lib/routines.jar;../lib/org.json.jar;../lib/crypto-utils.jar;../lib/dom4j-1.6.1.jar;../lib/log4j-1.2.17.jar;../lib/mssql-jdbc.jar;../lib/talend_DB_mssqlUtil-1.3-20190523.jar;../lib/talendcsv.jar;buy_extract_referential_0_11.jar;uploadfileinsharepoint_4_0.jar;gettokensharepoint_4_0.jar; dev.buy_extract_referential_0_11.BUY_EXTRACT_REFERENTIAL  --context=Default %*

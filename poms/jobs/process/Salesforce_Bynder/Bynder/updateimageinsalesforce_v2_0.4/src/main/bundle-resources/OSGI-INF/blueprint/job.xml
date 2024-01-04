@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+	<!-- Talend Job OSGi blueprint descriptor -->
+
+
+	<bean id="job" class="dev.recoverassetsfrombyndertosf_0_4.recoverAssetsFromBynderToSF" destroy-method="destroy">
+
+	</bean>
+
+	<service ref="job">
+		<interfaces>
+			<value>routines.system.api.TalendJob</value>
+		</interfaces>
+		<service-properties>
+			<entry key="name" value="recoverAssetsFromBynderToSF" />
+			<entry key="version" value="0.4" />
+			<entry key="type" value="job" />
+		</service-properties>
+	</service>
+
+</blueprint>

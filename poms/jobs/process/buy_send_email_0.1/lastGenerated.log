@@ -1,0 +1,38 @@
+[INFO] Disabling enhanced local repository: using legacy is strongly discouraged to ensure build reproducibility.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.example.dev.job:BUY_SEND_EMAIL >-----------------
+[INFO] Building DEV BUY_SEND_EMAIL-0.1.0 (0.1,Jobs) 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ BUY_SEND_EMAIL ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ BUY_SEND_EMAIL ---
+[WARNING] The POM for org.eclipse.platform:org.eclipse.osgi:jar:3.13.300 is missing, no dependency information available
+[WARNING] The POM for org.apache.commons:commons-exec:jar:1.2 is missing, no dependency information available
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ BUY_SEND_EMAIL ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ BUY_SEND_EMAIL ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ BUY_SEND_EMAIL ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ BUY_SEND_EMAIL ---
+[INFO] Building jar: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\buy_send_email_0.1\target\buy_send_email_0_1.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.0.0:single (default) @ BUY_SEND_EMAIL ---
+[INFO] Reading assembly descriptor: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\buy_send_email_0.1/src/main/assemblies/assembly.xml
+[WARNING] The POM for org.apache.felix:maven-bundle-plugin:jar:2.1.0 is missing, no dependency information available
+[INFO] Building zip: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\buy_send_email_0.1\target\buy_send_email_0_1.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.442 s
+[INFO] Finished at: 2022-06-28T15:27:43+02:00
+[INFO] ------------------------------------------------------------------------

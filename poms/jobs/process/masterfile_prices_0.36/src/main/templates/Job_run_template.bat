@@ -1,0 +1,3 @@
+%~d0
+cd %~dp0
+java -Dtalend.component.manager.m2.repository="%cd%/../lib" -Xms256M -Xmx1024M -Dmail.smtp.ssl.protocols=TLSv1.2 -cp .;../lib/routines.jar;../lib/crypto-utils.jar;../lib/dom4j-1.6.1.jar;../lib/log4j-1.2.17.jar;../lib/mssql-jdbc.jar;../lib/talend_DB_mssqlUtil-1.3-20190523.jar;masterfile_prices_0_36.jar;masterfile_extract_prices_1_0_13.jar; dev.masterfile_prices_0_36.MASTERFILE_PRICES  --context=Default %*

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_h7SlEL0REe2iJb3faoG3tg" name="SQLSERVERPRODUCTION" id="_QhY6AL0REe2iJb3faoG3tg" label="SQLSERVERPRODUCTION" dataPackage="_h--LML0REe2iJb3faoG3tg" DatabaseType="Microsoft SQL Server" DriverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" URL="jdbc:sqlserver://talendserver.database.windows.net:1433;DatabaseName=TalendDBProduction;" dbVersionString="MSSQL_PROP" Port="1433" Username="dbadmin" Password="ENC:[FsjPA2a8TSAIzpE6UUT5Zxy9P6bra1aa6qjuJUbSH0ANvuRYKt6K8mJ/MoXU5gHL]" ServerName="talendserver.database.windows.net" DatasourceName="" FileFieldName="" SID="TalendDBProduction" SqlSynthax="" StringQuote="" NullChar="" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_h7SlEb0REe2iJb3faoG3tg" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_h7sNsL0REe2iJb3faoG3tg" tag="package filter" value=""/>
+    <taggedValue xmi:id="_h7xtQL0REe2iJb3faoG3tg" tag="Status" value=""/>
+    <taggedValue xmi:id="_h7xtQb0REe2iJb3faoG3tg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_h7xtQr0REe2iJb3faoG3tg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_h7xtQ70REe2iJb3faoG3tg" tag="Description" value=""/>
+    <taggedValue xmi:id="_h7xtRL0REe2iJb3faoG3tg" tag="Author" value=""/>
+    <taggedValue xmi:id="_h7xtRb0REe2iJb3faoG3tg" tag="otherParameter"/>
+    <taggedValue xmi:id="_h83SYL0REe2iJb3faoG3tg" tag="DB ProductName" value="Microsoft SQL Server"/>
+    <taggedValue xmi:id="_h83SYb0REe2iJb3faoG3tg" tag="DB ProductVersion" value="12.00.937"/>
+    <taggedValue xmi:id="_h83SYr0REe2iJb3faoG3tg" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_h7SlEr0REe2iJb3faoG3tg" key="CONN_PARA_KEY_USERNAME" value="dbadmin"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_h--LML0REe2iJb3faoG3tg" name="TalendDBProduction" dataManager="_h7SlEL0REe2iJb3faoG3tg">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LMb0REe2iJb3faoG3tg" name="db_accessadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LMr0REe2iJb3faoG3tg" name="db_backupoperator"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LM70REe2iJb3faoG3tg" name="db_datareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LNL0REe2iJb3faoG3tg" name="db_datawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LNb0REe2iJb3faoG3tg" name="db_ddladmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LNr0REe2iJb3faoG3tg" name="db_denydatareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LN70REe2iJb3faoG3tg" name="db_denydatawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LOL0REe2iJb3faoG3tg" name="db_owner"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LOb0REe2iJb3faoG3tg" name="db_securityadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LOr0REe2iJb3faoG3tg" name="dbo"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LO70REe2iJb3faoG3tg" name="guest"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LPL0REe2iJb3faoG3tg" name="INFORMATION_SCHEMA"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LPb0REe2iJb3faoG3tg" name="sys"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LPr0REe2iJb3faoG3tg" name="data"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LP70REe2iJb3faoG3tg" name="masterfile"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LQL0REe2iJb3faoG3tg" name="nx_tech"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LQb0REe2iJb3faoG3tg" name="retail"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LQr0REe2iJb3faoG3tg" name="staging"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_h--LQ70REe2iJb3faoG3tg" name="talend"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_Tj7BYEPEEe2tbc2EWvInsA" name="SQLSERVER_MASTERFILE" id="_Tjrw0EPEEe2tbc2EWvInsA" label="SQLSERVER_MASTERFILE" dataPackage="_VUdK4EPEEe2tbc2EWvInsA" DatabaseType="Microsoft SQL Server" DriverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" URL="jdbc:sqlserver://neowise-testing.database.windows.net:1433;DatabaseName=ads_hbe_erp;" dbVersionString="MSSQL_PROP" Port="1433" Username="melusior" Password="ENC:[wlSsib4lW6f8zsNEtBKJKdEtDX09TmmKfzAbuzuaCA0tAa0YEDmMN24Uihu9UNv/4I7tzBXq6tU=]" ServerName="neowise-testing.database.windows.net" DatasourceName="" FileFieldName="" SID="ads_hbe_erp" SqlSynthax="" StringQuote="" NullChar="" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="masterfile">
+    <taggedValue xmi:id="_GA3DsFN_EeyhTqsR4Xgvrw" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_GCUcQFN_EeyhTqsR4Xgvrw" tag="package filter" value=""/>
+    <taggedValue xmi:id="_GCfbYFN_EeyhTqsR4Xgvrw" tag="Status" value=""/>
+    <taggedValue xmi:id="_GCfbYVN_EeyhTqsR4Xgvrw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GCfbYlN_EeyhTqsR4Xgvrw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_GCfbY1N_EeyhTqsR4Xgvrw" tag="Description" value=""/>
+    <taggedValue xmi:id="_GCfbZFN_EeyhTqsR4Xgvrw" tag="Author" value=""/>
+    <taggedValue xmi:id="_GCfbZVN_EeyhTqsR4Xgvrw" tag="otherParameter"/>
+    <taggedValue xmi:id="_4G7C8FN_EeyhTqsR4Xgvrw" tag="DB ProductName" value="Microsoft SQL Server"/>
+    <taggedValue xmi:id="_4G7C8VN_EeyhTqsR4Xgvrw" tag="DB ProductVersion" value="12.00.537"/>
+    <taggedValue xmi:id="_4G7C8lN_EeyhTqsR4Xgvrw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_GA3DsVN_EeyhTqsR4Xgvrw" key="CONN_PARA_KEY_USERNAME" value="melusior"/>
+    <parameters xmi:id="_XUd5gFN_EeyhTqsR4Xgvrw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_VUdK4EPEEe2tbc2EWvInsA" name="ads_hbe_erp" dataManager="_Tj7BYEPEEe2tbc2EWvInsA">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_VUdK4UPEEe2tbc2EWvInsA" name="masterfile"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>
