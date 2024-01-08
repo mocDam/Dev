@@ -426,6 +426,7 @@ public java.lang.String getSQLSERVER_LOG_Password(){
 		public  final java.util.List<String[]> globalBuffer = new java.util.ArrayList<String[]>();
 	
 
+private RunStat runStat = new RunStat();
 
 	// OSGi DataSource
 	private final static String KEY_DB_DATASOURCES = "KEY_DB_DATASOURCES";
@@ -1829,6 +1830,9 @@ public void preStaLogConProcess(final java.util.Map<String, Object> globalMap) t
 ok_Hash.put("preStaLogCon", true);
 end_Hash.put("preStaLogCon", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("after_preStaLogCon_connectionStatsLogs", 0, "ok");
+				}
 				connectionStatsLogsProcess(globalMap);
 
 
@@ -1849,6 +1853,8 @@ end_Hash.put("preStaLogCon", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -2019,6 +2025,9 @@ public void tPrejob_1Process(final java.util.Map<String, Object> globalMap) thro
 ok_Hash.put("tPrejob_1", true);
 end_Hash.put("tPrejob_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
+				}
 				tJava_1Process(globalMap);
 
 
@@ -2039,6 +2048,8 @@ end_Hash.put("tPrejob_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -2216,6 +2227,9 @@ System.out.println("******************* SHEMA *****************");
 ok_Hash.put("tJava_1", true);
 end_Hash.put("tJava_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk10", 0, "ok");
+				}
 				tSetGlobalVar_1Process(globalMap);
 
 
@@ -2236,6 +2250,8 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -2429,6 +2445,8 @@ end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
 				throw te;
 			}catch(java.lang.Error error){	
 				
+					runStat.stopThreadStat();
+				
 				throw error;
 			}finally{
 				
@@ -2598,6 +2616,9 @@ public void tPostjob_1Process(final java.util.Map<String, Object> globalMap) thr
 ok_Hash.put("tPostjob_1", true);
 end_Hash.put("tPostjob_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk5", 0, "ok");
+				}
 				tFileExist_1Process(globalMap);
 
 
@@ -2618,6 +2639,8 @@ end_Hash.put("tPostjob_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -2802,10 +2825,19 @@ end_Hash.put("tFileExist_1", System.currentTimeMillis());
 
    			if (((Boolean)globalMap.get("tFileExist_1_EXISTS"))) {
    				
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If3", 0, "true");
+					}
+				
     			tFileInputDelimited_1Process(globalMap);
    			}
 
-			
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If3", 0, "false");
+					}   	 
+   				}
 
 
 
@@ -2825,6 +2857,8 @@ end_Hash.put("tFileExist_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -3720,6 +3754,10 @@ row6Struct row6 = new row6Struct();
 	currentComponent="tAggregateRow_1_AGGOUT";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"out");
+					}
+				
 		int tos_count_tAggregateRow_1_AGGOUT = 0;
 		
 
@@ -3811,6 +3849,10 @@ java.util.Map hashAggreg_tAggregateRow_1 = new java.util.HashMap();
 	currentComponent="tMap_3";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row5");
+					}
+				
 		int tos_count_tMap_3 = 0;
 		
 
@@ -4064,6 +4106,10 @@ if(row5 != null) {
 	currentComponent="tMap_3";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row5");
+					}
+					
 
 		
 		
@@ -4168,6 +4214,10 @@ if(out != null) {
 	currentComponent="tAggregateRow_1_AGGOUT";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"out");
+					}
+					
 	
 operation_finder_tAggregateRow_1.PRICECURRENCYCODE = out.PRICECURRENCYCODE;
 			operation_finder_tAggregateRow_1.GROUPCODE = out.GROUPCODE;
@@ -4364,6 +4414,10 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row5");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_3", true);
@@ -4391,6 +4445,10 @@ end_Hash.put("tMap_3", System.currentTimeMillis());
 
 	
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"out");
+			  	}
+			  	
  
 
 ok_Hash.put("tAggregateRow_1_AGGOUT", true);
@@ -4420,6 +4478,10 @@ end_Hash.put("tAggregateRow_1_AGGOUT", System.currentTimeMillis());
 	currentComponent="tHashOutput_1";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row6");
+					}
+				
 		int tos_count_tHashOutput_1 = 0;
 		
 
@@ -4542,6 +4604,10 @@ for(AggOperationStruct_tAggregateRow_1 aggregated_row_tAggregateRow_1 : values_t
 	currentComponent="tHashOutput_1";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row6");
+					}
+					
 
 
 
@@ -4668,6 +4734,10 @@ end_Hash.put("tAggregateRow_1_AGGIN", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_1_NB_LINE", nb_line_tHashOutput_1);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row6");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_1", true);
@@ -4698,6 +4768,10 @@ end_Hash.put("tHashOutput_1", System.currentTimeMillis());
 				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tFileInputDelimited_1:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
 								}	    				    			
 					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+								} 
+							
 							tHashInput_1Process(globalMap); 
 						
 
@@ -4712,6 +4786,8 @@ end_Hash.put("tHashOutput_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -5341,6 +5417,10 @@ copyOfout_dataStruct copyOfout_data = new copyOfout_dataStruct();
 	currentComponent="tFlowToIterate_1";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row7");
+					}
+				
 		int tos_count_tFlowToIterate_1 = 0;
 		
 
@@ -5451,6 +5531,10 @@ while (iterator_tHashInput_1.hasNext()) {
 	currentComponent="tFlowToIterate_1";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row7");
+					}
+					
 
 
     	            
@@ -5493,6 +5577,43 @@ while (iterator_tHashInput_1.hasNext()) {
 	NB_ITERATE_tSleep_1++;
 	
 	
+					if(execStat){				
+	       				runStat.updateStatOnConnection("copyOfcopyOfout_data", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk4", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row6_0", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("copyOfout_data", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("out_data", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row8", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row5_0", 3, 0);
+					}           			
+				
+				if(execStat){
+					runStat.updateStatOnConnection("iterate1", 1, "exec" + NB_ITERATE_tSleep_1);
+					//Thread.sleep(1000);
+				}				
+			
 
 
 
@@ -5512,6 +5633,10 @@ while (iterator_tHashInput_1.hasNext()) {
 	currentComponent="tFileOutputDelimited_1";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfout_data");
+					}
+				
 		int tos_count_tFileOutputDelimited_1 = 0;
 		
 
@@ -5603,6 +5728,10 @@ resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1
 	currentComponent="tMap_4";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row5_0");
+					}
+				
 		int tos_count_tMap_4 = 0;
 		
 
@@ -5732,6 +5861,10 @@ copyOfout_dataStruct copyOfout_data_tmp = new copyOfout_dataStruct();
 	currentComponent="tMap_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row5_0");
+					}
+					
 
 		
 		
@@ -5818,6 +5951,10 @@ if(copyOfout_data != null) {
 	currentComponent="tFileOutputDelimited_1";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfout_data");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_1 = new StringBuilder();
@@ -5981,6 +6118,10 @@ end_Hash.put("tSleep_1", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row5_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_4", true);
@@ -6023,11 +6164,18 @@ end_Hash.put("tMap_4", System.currentTimeMillis());
 		resourceMap.put("finish_tFileOutputDelimited_1", true);
 	
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfout_data");
+			  	}
+			  	
  
 
 ok_Hash.put("tFileOutputDelimited_1", true);
 end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk3", 0, "ok");
+				}
 				tFileInputDelimited_2Process(globalMap);
 
 
@@ -6041,6 +6189,10 @@ end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
 
 
 
+						if(execStat){
+							runStat.updateStatOnConnection("iterate1", 2, "exec" + NB_ITERATE_tSleep_1);
+						}				
+					
 
 
 
@@ -6140,11 +6292,18 @@ end_Hash.put("tHashInput_1", System.currentTimeMillis());
 	
 
 globalMap.put("tFlowToIterate_1_NB_LINE",nb_line_tFlowToIterate_1);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row7");
+			  	}
+			  	
  
 
 ok_Hash.put("tFlowToIterate_1", true);
 end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk7", 0, "ok");
+				}
 				tFileExist_2Process(globalMap);
 
 
@@ -6168,6 +6327,8 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -6767,6 +6928,10 @@ out_dataStruct out_data = new out_dataStruct();
 	currentComponent="tFileOutputDelimited_2";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"out_data");
+					}
+				
 		int tos_count_tFileOutputDelimited_2 = 0;
 		
 
@@ -6852,6 +7017,10 @@ resourceMap.put("nb_line_tFileOutputDelimited_2", nb_line_tFileOutputDelimited_2
 	currentComponent="tMap_5";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row8");
+					}
+				
 		int tos_count_tMap_5 = 0;
 		
 
@@ -7105,6 +7274,10 @@ if(row8 != null) {
 	currentComponent="tMap_5";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row8");
+					}
+					
 
 		
 		
@@ -7199,6 +7372,10 @@ if(out_data != null) {
 	currentComponent="tFileOutputDelimited_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"out_data");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_2 = new StringBuilder();
@@ -7381,6 +7558,10 @@ end_Hash.put("tFileInputDelimited_2", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row8");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_5", true);
@@ -7423,11 +7604,18 @@ end_Hash.put("tMap_5", System.currentTimeMillis());
 		resourceMap.put("finish_tFileOutputDelimited_2", true);
 	
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"out_data");
+			  	}
+			  	
  
 
 ok_Hash.put("tFileOutputDelimited_2", true);
 end_Hash.put("tFileOutputDelimited_2", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
+				}
 				tSleep_2Process(globalMap);
 
 
@@ -7454,6 +7642,8 @@ end_Hash.put("tFileOutputDelimited_2", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -7819,6 +8009,10 @@ copyOfcopyOfout_dataStruct copyOfcopyOfout_data = new copyOfcopyOfout_dataStruct
 	currentComponent="tFileOutputDelimited_3";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfout_data");
+					}
+				
 		int tos_count_tFileOutputDelimited_3 = 0;
 		
 
@@ -7904,6 +8098,10 @@ resourceMap.put("nb_line_tFileOutputDelimited_3", nb_line_tFileOutputDelimited_3
 	currentComponent="tMap_6";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row6_0");
+					}
+				
 		int tos_count_tMap_6 = 0;
 		
 
@@ -8033,6 +8231,10 @@ copyOfcopyOfout_dataStruct copyOfcopyOfout_data_tmp = new copyOfcopyOfout_dataSt
 	currentComponent="tMap_6";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row6_0");
+					}
+					
 
 		
 		
@@ -8119,6 +8321,10 @@ if(copyOfcopyOfout_data != null) {
 	currentComponent="tFileOutputDelimited_3";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfout_data");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_3 = new StringBuilder();
@@ -8282,6 +8488,10 @@ end_Hash.put("tSleep_2", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row6_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_6", true);
@@ -8324,6 +8534,10 @@ end_Hash.put("tMap_6", System.currentTimeMillis());
 		resourceMap.put("finish_tFileOutputDelimited_3", true);
 	
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfout_data");
+			  	}
+			  	
  
 
 ok_Hash.put("tFileOutputDelimited_3", true);
@@ -8354,6 +8568,8 @@ end_Hash.put("tFileOutputDelimited_3", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -8601,10 +8817,19 @@ end_Hash.put("tFileExist_2", System.currentTimeMillis());
 
    			if (((Boolean)globalMap.get("tFileExist_2_EXISTS"))) {
    				
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If2", 0, "true");
+					}
+				
     			tFileDelete_1Process(globalMap);
    			}
 
-			
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If2", 0, "false");
+					}   	 
+   				}
 
 
 
@@ -8624,6 +8849,8 @@ end_Hash.put("tFileExist_2", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -8868,6 +9095,8 @@ end_Hash.put("tFileDelete_1", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -14402,6 +14631,10 @@ row10Struct row10 = new row10Struct();
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row10");
+					}
+				
 		int tos_count_tFileOutputDelimited_4 = 0;
 		
 
@@ -14488,6 +14721,10 @@ resourceMap.put("nb_line_tFileOutputDelimited_4", nb_line_tFileOutputDelimited_4
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_add_linenumber");
+					}
+				
 		int tos_count_tUniqRow_2 = 0;
 		
 
@@ -14647,6 +14884,10 @@ java.util.Set<KeyStruct_tUniqRow_2> keystUniqRow_2 = new java.util.HashSet<KeySt
 	currentComponent="tMap_2";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_map");
+					}
+				
 		int tos_count_tMap_2 = 0;
 		
 
@@ -14720,6 +14961,10 @@ sortie_add_linenumberStruct sortie_add_linenumber_tmp = new sortie_add_linenumbe
 	currentComponent="tMap_22";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row41");
+					}
+				
 		int tos_count_tMap_22 = 0;
 		
 
@@ -14793,6 +15038,10 @@ sortie_mapStruct sortie_map_tmp = new sortie_mapStruct();
 	currentComponent="tMap_8";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row11");
+					}
+				
 		int tos_count_tMap_8 = 0;
 		
 
@@ -14866,6 +15115,10 @@ row41Struct row41_tmp = new row41Struct();
 	currentComponent="tUnite_2";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row51","row77","row52","row54","row72","row66","row39","row53","Merge1","row40","row59","row60","row78","row71");
+					}
+				
 		int tos_count_tUnite_2 = 0;
 		
 
@@ -14981,6 +15234,10 @@ while (iterator_tHashInput_9.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row39");
+						}
+						
 //////////
  
 
@@ -15043,6 +15300,10 @@ while (iterator_tHashInput_9.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -15250,6 +15511,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -15439,6 +15704,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -15633,6 +15902,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -15774,6 +16047,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -16195,6 +16472,10 @@ while (iterator_tHashInput_10.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row40");
+						}
+						
 //////////
  
 
@@ -16257,6 +16538,10 @@ while (iterator_tHashInput_10.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -16464,6 +16749,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -16653,6 +16942,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -16847,6 +17140,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -16988,6 +17285,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -17409,6 +17710,10 @@ while (iterator_tHashInput_11.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row51");
+						}
+						
 //////////
  
 
@@ -17471,6 +17776,10 @@ while (iterator_tHashInput_11.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -17678,6 +17987,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -17867,6 +18180,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -18061,6 +18378,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -18202,6 +18523,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -18623,6 +18948,10 @@ while (iterator_tHashInput_12.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row52");
+						}
+						
 //////////
  
 
@@ -18685,6 +19014,10 @@ while (iterator_tHashInput_12.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -18892,6 +19225,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -19081,6 +19418,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -19275,6 +19616,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -19416,6 +19761,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -19837,6 +20186,10 @@ while (iterator_tHashInput_13.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row53");
+						}
+						
 //////////
  
 
@@ -19899,6 +20252,10 @@ while (iterator_tHashInput_13.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -20106,6 +20463,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -20295,6 +20656,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -20489,6 +20854,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -20630,6 +20999,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -21051,6 +21424,10 @@ while (iterator_tHashInput_14.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row54");
+						}
+						
 //////////
  
 
@@ -21113,6 +21490,10 @@ while (iterator_tHashInput_14.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -21320,6 +21701,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -21509,6 +21894,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -21703,6 +22092,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -21844,6 +22237,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -22265,6 +22662,10 @@ while (iterator_tHashInput_15.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row59");
+						}
+						
 //////////
  
 
@@ -22327,6 +22728,10 @@ while (iterator_tHashInput_15.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -22534,6 +22939,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -22723,6 +23132,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -22917,6 +23330,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -23058,6 +23475,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -23479,6 +23900,10 @@ while (iterator_tHashInput_16.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row60");
+						}
+						
 //////////
  
 
@@ -23541,6 +23966,10 @@ while (iterator_tHashInput_16.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -23748,6 +24177,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -23937,6 +24370,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -24131,6 +24568,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -24272,6 +24713,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -24693,6 +25138,10 @@ while (iterator_tHashInput_17.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"Merge1");
+						}
+						
 //////////
  
 
@@ -24755,6 +25204,10 @@ while (iterator_tHashInput_17.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -24962,6 +25415,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -25151,6 +25608,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -25345,6 +25806,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -25486,6 +25951,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -25907,6 +26376,10 @@ while (iterator_tHashInput_18.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row66");
+						}
+						
 //////////
  
 
@@ -25969,6 +26442,10 @@ while (iterator_tHashInput_18.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -26176,6 +26653,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -26365,6 +26846,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -26559,6 +27044,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -26700,6 +27189,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -27121,6 +27614,10 @@ while (iterator_tHashInput_19.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row71");
+						}
+						
 //////////
  
 
@@ -27183,6 +27680,10 @@ while (iterator_tHashInput_19.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -27390,6 +27891,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -27579,6 +28084,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -27773,6 +28282,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -27914,6 +28427,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -28335,6 +28852,10 @@ while (iterator_tHashInput_20.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row72");
+						}
+						
 //////////
  
 
@@ -28397,6 +28918,10 @@ while (iterator_tHashInput_20.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -28604,6 +29129,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -28793,6 +29322,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -28987,6 +29520,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -29128,6 +29665,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -29549,6 +30090,10 @@ while (iterator_tHashInput_21.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row77");
+						}
+						
 //////////
  
 
@@ -29611,6 +30156,10 @@ while (iterator_tHashInput_21.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -29818,6 +30367,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -30007,6 +30560,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -30201,6 +30758,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -30342,6 +30903,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -30763,6 +31328,10 @@ while (iterator_tHashInput_22.hasNext()) {
 	currentComponent="tUnite_2";
 
 	
+						if(execStat){
+							runStat.updateStatOnConnection(iterateId,1,1,"row78");
+						}
+						
 //////////
  
 
@@ -30825,6 +31394,10 @@ while (iterator_tHashInput_22.hasNext()) {
 	currentComponent="tMap_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row11");
+					}
+					
 
 		
 		
@@ -31032,6 +31605,10 @@ if(row41 != null) {
 	currentComponent="tMap_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row41");
+					}
+					
 
 		
 		
@@ -31221,6 +31798,10 @@ if(sortie_map != null) {
 	currentComponent="tMap_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_map");
+					}
+					
 
 		
 		
@@ -31415,6 +31996,10 @@ if(sortie_add_linenumber != null) {
 	currentComponent="tUniqRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_add_linenumber");
+					}
+					
 row10 = null;			
 if(sortie_add_linenumber.ITEMNUMBER == null){
 	finder_tUniqRow_2.ITEMNUMBER = null;
@@ -31556,6 +32141,10 @@ if(row10 != null) {
 	currentComponent="tFileOutputDelimited_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row10");
+					}
+					
 
 
                     StringBuilder sb_tFileOutputDelimited_4 = new StringBuilder();
@@ -31888,6 +32477,10 @@ end_Hash.put("tHashInput_22", System.currentTimeMillis());
 	
 
 globalMap.put("tUnite_2_NB_LINE", nb_line_tUnite_2);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row51","row77","row52","row54","row72","row66","row39","row53","Merge1","row40","row59","row60","row78","row71");
+			  	}
+			  	
  
 
 ok_Hash.put("tUnite_2", true);
@@ -31930,6 +32523,10 @@ end_Hash.put("tUnite_2", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row11");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_8", true);
@@ -31972,6 +32569,10 @@ end_Hash.put("tMap_8", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row41");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_22", true);
@@ -32014,6 +32615,10 @@ end_Hash.put("tMap_22", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_map");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_2", true);
@@ -32042,6 +32647,10 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 globalMap.put("tUniqRow_2_NB_UNIQUES",nb_uniques_tUniqRow_2);
 globalMap.put("tUniqRow_2_NB_DUPLICATES",nb_duplicates_tUniqRow_2);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_add_linenumber");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_2", true);
@@ -32084,6 +32693,10 @@ end_Hash.put("tUniqRow_2", System.currentTimeMillis());
 		resourceMap.put("finish_tFileOutputDelimited_4", true);
 	
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row10");
+			  	}
+			  	
  
 
 ok_Hash.put("tFileOutputDelimited_4", true);
@@ -32123,6 +32736,8 @@ end_Hash.put("tFileOutputDelimited_4", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -32946,6 +33561,10 @@ public void tDBInput_4Process(final java.util.Map<String, Object> globalMap) thr
 	currentComponent="tAdvancedHash_row12";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row12");
+					}
+				
 		int tos_count_tAdvancedHash_row12 = 0;
 		
 
@@ -33174,6 +33793,10 @@ public void tDBInput_4Process(final java.util.Map<String, Object> globalMap) thr
 	currentComponent="tAdvancedHash_row12";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row12");
+					}
+					
 
 
 			   
@@ -33330,6 +33953,10 @@ end_Hash.put("tDBInput_4", System.currentTimeMillis());
 
 tHash_Lookup_row12.endPut();
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row12");
+			  	}
+			  	
  
 
 ok_Hash.put("tAdvancedHash_row12", true);
@@ -33357,6 +33984,8 @@ end_Hash.put("tAdvancedHash_row12", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -33787,6 +34416,10 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 	currentComponent="tAdvancedHash_row4";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row4");
+					}
+				
 		int tos_count_tAdvancedHash_row4 = 0;
 		
 
@@ -34016,6 +34649,10 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 	currentComponent="tAdvancedHash_row4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row4");
+					}
+					
 
 
 			   
@@ -34172,6 +34809,10 @@ end_Hash.put("tDBInput_1", System.currentTimeMillis());
 
 tHash_Lookup_row4.endPut();
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row4");
+			  	}
+			  	
  
 
 ok_Hash.put("tAdvancedHash_row4", true);
@@ -34199,6 +34840,8 @@ end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -34579,6 +35222,10 @@ public void tDBInput_3Process(final java.util.Map<String, Object> globalMap) thr
 	currentComponent="tAdvancedHash_row9";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row9");
+					}
+				
 		int tos_count_tAdvancedHash_row9 = 0;
 		
 
@@ -34793,6 +35440,10 @@ public void tDBInput_3Process(final java.util.Map<String, Object> globalMap) thr
 	currentComponent="tAdvancedHash_row9";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row9");
+					}
+					
 
 
 			   
@@ -34947,6 +35598,10 @@ end_Hash.put("tDBInput_3", System.currentTimeMillis());
 
 tHash_Lookup_row9.endPut();
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row9");
+			  	}
+			  	
  
 
 ok_Hash.put("tAdvancedHash_row9", true);
@@ -34974,6 +35629,8 @@ end_Hash.put("tAdvancedHash_row9", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -58860,6 +59517,10 @@ row76Struct row76 = new row76Struct();
 	currentComponent="tHashOutput_9";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row37");
+					}
+				
 		int tos_count_tHashOutput_9 = 0;
 		
 
@@ -58903,6 +59564,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_9=org.
 	currentComponent="tFilterRow_2";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row35");
+					}
+				
 		int tos_count_tFilterRow_2 = 0;
 		
     int nb_line_tFilterRow_2 = 0;
@@ -58973,6 +59638,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_9=org.
 	currentComponent="tUniqRow_18";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_EUR_WSP");
+					}
+				
 		int tos_count_tUniqRow_18 = 0;
 		
 
@@ -59147,6 +59816,10 @@ java.util.Set<KeyStruct_tUniqRow_18> keystUniqRow_18 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_10";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row38");
+					}
+				
 		int tos_count_tHashOutput_10 = 0;
 		
 
@@ -59190,6 +59863,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_10=org
 	currentComponent="tFilterRow_3";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row36");
+					}
+				
 		int tos_count_tFilterRow_3 = 0;
 		
     int nb_line_tFilterRow_3 = 0;
@@ -59260,6 +59937,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_10=org
 	currentComponent="tUniqRow_19";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfsortie_EUR_WSP");
+					}
+				
 		int tos_count_tUniqRow_19 = 0;
 		
 
@@ -59434,6 +60115,10 @@ java.util.Set<KeyStruct_tUniqRow_19> keystUniqRow_19 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_11";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row44");
+					}
+				
 		int tos_count_tHashOutput_11 = 0;
 		
 
@@ -59477,6 +60162,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_11=org
 	currentComponent="tFilterRow_4";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row43");
+					}
+				
 		int tos_count_tFilterRow_4 = 0;
 		
     int nb_line_tFilterRow_4 = 0;
@@ -59547,6 +60236,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_11=org
 	currentComponent="tUniqRow_20";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfsortie_EUR_WSP_0");
+					}
+				
 		int tos_count_tUniqRow_20 = 0;
 		
 
@@ -59721,6 +60414,10 @@ java.util.Set<KeyStruct_tUniqRow_20> keystUniqRow_20 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_12";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row46");
+					}
+				
 		int tos_count_tHashOutput_12 = 0;
 		
 
@@ -59764,6 +60461,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_12=org
 	currentComponent="tFilterRow_5";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row45");
+					}
+				
 		int tos_count_tFilterRow_5 = 0;
 		
     int nb_line_tFilterRow_5 = 0;
@@ -59834,6 +60535,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_12=org
 	currentComponent="tUniqRow_21";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfsortie_EUR_WSP_0");
+					}
+				
 		int tos_count_tUniqRow_21 = 0;
 		
 
@@ -60008,6 +60713,10 @@ java.util.Set<KeyStruct_tUniqRow_21> keystUniqRow_21 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_13";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row48");
+					}
+				
 		int tos_count_tHashOutput_13 = 0;
 		
 
@@ -60051,6 +60760,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_13=org
 	currentComponent="tFilterRow_6";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row47");
+					}
+				
 		int tos_count_tFilterRow_6 = 0;
 		
     int nb_line_tFilterRow_6 = 0;
@@ -60121,6 +60834,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_13=org
 	currentComponent="tUniqRow_22";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfsortie_EUR_WSP_0");
+					}
+				
 		int tos_count_tUniqRow_22 = 0;
 		
 
@@ -60295,6 +61012,10 @@ java.util.Set<KeyStruct_tUniqRow_22> keystUniqRow_22 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_14";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row50");
+					}
+				
 		int tos_count_tHashOutput_14 = 0;
 		
 
@@ -60338,6 +61059,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_14=org
 	currentComponent="tFilterRow_7";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row49");
+					}
+				
 		int tos_count_tFilterRow_7 = 0;
 		
     int nb_line_tFilterRow_7 = 0;
@@ -60408,6 +61133,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_14=org
 	currentComponent="tUniqRow_23";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0");
+					}
+				
 		int tos_count_tUniqRow_23 = 0;
 		
 
@@ -60582,6 +61311,10 @@ java.util.Set<KeyStruct_tUniqRow_23> keystUniqRow_23 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_15";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row56");
+					}
+				
 		int tos_count_tHashOutput_15 = 0;
 		
 
@@ -60625,6 +61358,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_15=org
 	currentComponent="tFilterRow_8";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row55");
+					}
+				
 		int tos_count_tFilterRow_8 = 0;
 		
     int nb_line_tFilterRow_8 = 0;
@@ -60695,6 +61432,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_15=org
 	currentComponent="tUniqRow_24";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+					}
+				
 		int tos_count_tUniqRow_24 = 0;
 		
 
@@ -60869,6 +61610,10 @@ java.util.Set<KeyStruct_tUniqRow_24> keystUniqRow_24 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_16";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row58");
+					}
+				
 		int tos_count_tHashOutput_16 = 0;
 		
 
@@ -60912,6 +61657,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_16=org
 	currentComponent="tFilterRow_9";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row57");
+					}
+				
 		int tos_count_tFilterRow_9 = 0;
 		
     int nb_line_tFilterRow_9 = 0;
@@ -60982,6 +61731,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_16=org
 	currentComponent="tUniqRow_25";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0");
+					}
+				
 		int tos_count_tUniqRow_25 = 0;
 		
 
@@ -61156,6 +61909,10 @@ java.util.Set<KeyStruct_tUniqRow_25> keystUniqRow_25 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_17";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row62");
+					}
+				
 		int tos_count_tHashOutput_17 = 0;
 		
 
@@ -61199,6 +61956,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_17=org
 	currentComponent="tFilterRow_10";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row61");
+					}
+				
 		int tos_count_tFilterRow_10 = 0;
 		
     int nb_line_tFilterRow_10 = 0;
@@ -61269,6 +62030,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_17=org
 	currentComponent="tUniqRow_26";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+					}
+				
 		int tos_count_tUniqRow_26 = 0;
 		
 
@@ -61443,6 +62208,10 @@ java.util.Set<KeyStruct_tUniqRow_26> keystUniqRow_26 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_18";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row63");
+					}
+				
 		int tos_count_tHashOutput_18 = 0;
 		
 
@@ -61486,6 +62255,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_18=org
 	currentComponent="tFilterRow_11";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row64");
+					}
+				
 		int tos_count_tFilterRow_11 = 0;
 		
     int nb_line_tFilterRow_11 = 0;
@@ -61556,6 +62329,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_18=org
 	currentComponent="tUniqRow_27";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+					}
+				
 		int tos_count_tUniqRow_27 = 0;
 		
 
@@ -61730,6 +62507,10 @@ java.util.Set<KeyStruct_tUniqRow_27> keystUniqRow_27 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_19";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row67");
+					}
+				
 		int tos_count_tHashOutput_19 = 0;
 		
 
@@ -61773,6 +62554,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_19=org
 	currentComponent="tFilterRow_12";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row68");
+					}
+				
 		int tos_count_tFilterRow_12 = 0;
 		
     int nb_line_tFilterRow_12 = 0;
@@ -61843,6 +62628,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_19=org
 	currentComponent="tUniqRow_28";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0");
+					}
+				
 		int tos_count_tUniqRow_28 = 0;
 		
 
@@ -62017,6 +62806,10 @@ java.util.Set<KeyStruct_tUniqRow_28> keystUniqRow_28 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_20";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"Main1");
+					}
+				
 		int tos_count_tHashOutput_20 = 0;
 		
 
@@ -62060,6 +62853,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_20=org
 	currentComponent="tFilterRow_13";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row69");
+					}
+				
 		int tos_count_tFilterRow_13 = 0;
 		
     int nb_line_tFilterRow_13 = 0;
@@ -62130,6 +62927,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_20=org
 	currentComponent="tUniqRow_29";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0");
+					}
+				
 		int tos_count_tUniqRow_29 = 0;
 		
 
@@ -62304,6 +63105,10 @@ java.util.Set<KeyStruct_tUniqRow_29> keystUniqRow_29 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_21";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row74");
+					}
+				
 		int tos_count_tHashOutput_21 = 0;
 		
 
@@ -62347,6 +63152,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_21=org
 	currentComponent="tFilterRow_14";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row73");
+					}
+				
 		int tos_count_tFilterRow_14 = 0;
 		
     int nb_line_tFilterRow_14 = 0;
@@ -62417,6 +63226,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_21=org
 	currentComponent="tUniqRow_30";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0");
+					}
+				
 		int tos_count_tUniqRow_30 = 0;
 		
 
@@ -62591,6 +63404,10 @@ java.util.Set<KeyStruct_tUniqRow_30> keystUniqRow_30 = new java.util.HashSet<Key
 	currentComponent="tHashOutput_22";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row76");
+					}
+				
 		int tos_count_tHashOutput_22 = 0;
 		
 
@@ -62634,6 +63451,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_22=org
 	currentComponent="tFilterRow_15";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row75");
+					}
+				
 		int tos_count_tFilterRow_15 = 0;
 		
     int nb_line_tFilterRow_15 = 0;
@@ -62704,6 +63525,10 @@ org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_22=org
 	currentComponent="tUniqRow_31";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0");
+					}
+				
 		int tos_count_tUniqRow_31 = 0;
 		
 
@@ -62874,6 +63699,10 @@ java.util.Set<KeyStruct_tUniqRow_31> keystUniqRow_31 = new java.util.HashSet<Key
 	currentComponent="tMap_34";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_EUR_FIN_WSP");
+					}
+				
 		int tos_count_tMap_34 = 0;
 		
 
@@ -62937,6 +63766,10 @@ copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0Struct cop
 	currentComponent="tMap_33";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_SEK_RRP");
+					}
+				
 		int tos_count_tMap_33 = 0;
 		
 
@@ -63001,6 +63834,10 @@ sortie_full_EUR_FIN_WSPStruct sortie_full_EUR_FIN_WSP_tmp = new sortie_full_EUR_
 	currentComponent="tMap_32";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_SEK_WSP");
+					}
+				
 		int tos_count_tMap_32 = 0;
 		
 
@@ -63065,6 +63902,10 @@ sortie_full_SEK_RRPStruct sortie_full_SEK_RRP_tmp = new sortie_full_SEK_RRPStruc
 	currentComponent="tMap_31";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_DKK_WSP");
+					}
+				
 		int tos_count_tMap_31 = 0;
 		
 
@@ -63129,6 +63970,10 @@ sortie_full_SEK_WSPStruct sortie_full_SEK_WSP_tmp = new sortie_full_SEK_WSPStruc
 	currentComponent="tMap_30";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_DKK_RRP");
+					}
+				
 		int tos_count_tMap_30 = 0;
 		
 
@@ -63193,6 +64038,10 @@ sortie_full_DKK_WSPStruct sortie_full_DKK_WSP_tmp = new sortie_full_DKK_WSPStruc
 	currentComponent="tMap_29";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_nok_rrp");
+					}
+				
 		int tos_count_tMap_29 = 0;
 		
 
@@ -63257,6 +64106,10 @@ sortie_full_DKK_RRPStruct sortie_full_DKK_RRP_tmp = new sortie_full_DKK_RRPStruc
 	currentComponent="tMap_28";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_NOK_WSP");
+					}
+				
 		int tos_count_tMap_28 = 0;
 		
 
@@ -63321,6 +64174,10 @@ sortie_full_nok_rrpStruct sortie_full_nok_rrp_tmp = new sortie_full_nok_rrpStruc
 	currentComponent="tMap_27";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_chr_rrp");
+					}
+				
 		int tos_count_tMap_27 = 0;
 		
 
@@ -63385,6 +64242,10 @@ sortie_full_NOK_WSPStruct sortie_full_NOK_WSP_tmp = new sortie_full_NOK_WSPStruc
 	currentComponent="tMap_26";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_CHF_WSP");
+					}
+				
 		int tos_count_tMap_26 = 0;
 		
 
@@ -63449,6 +64310,10 @@ sortie_full_chr_rrpStruct sortie_full_chr_rrp_tmp = new sortie_full_chr_rrpStruc
 	currentComponent="tMap_25";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_GBP_RRP");
+					}
+				
 		int tos_count_tMap_25 = 0;
 		
 
@@ -63513,6 +64378,10 @@ sortie_full_CHF_WSPStruct sortie_full_CHF_WSP_tmp = new sortie_full_CHF_WSPStruc
 	currentComponent="tMap_24";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_gbp_wsp");
+					}
+				
 		int tos_count_tMap_24 = 0;
 		
 
@@ -63577,6 +64446,10 @@ sortie_full_GBP_RRPStruct sortie_full_GBP_RRP_tmp = new sortie_full_GBP_RRPStruc
 	currentComponent="tMap_23";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_rrp_eur");
+					}
+				
 		int tos_count_tMap_23 = 0;
 		
 
@@ -63641,6 +64514,10 @@ sortie_full_gbp_wspStruct sortie_full_gbp_wsp_tmp = new sortie_full_gbp_wspStruc
 	currentComponent="tMap_21";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_full_eur_wsp");
+					}
+				
 		int tos_count_tMap_21 = 0;
 		
 
@@ -63705,6 +64582,10 @@ sortie_full_rrp_eurStruct sortie_full_rrp_eur_tmp = new sortie_full_rrp_eurStruc
 	currentComponent="tMap_20";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_Excel");
+					}
+				
 		int tos_count_tMap_20 = 0;
 		
 
@@ -63779,6 +64660,10 @@ sortie_full_eur_wspStruct sortie_full_eur_wsp_tmp = new sortie_full_eur_wspStruc
 	currentComponent="tFilterRow_1";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"sortie_Excel1");
+					}
+				
 		int tos_count_tFilterRow_1 = 0;
 		
     int nb_line_tFilterRow_1 = 0;
@@ -63849,6 +64734,10 @@ sortie_full_eur_wspStruct sortie_full_eur_wsp_tmp = new sortie_full_eur_wspStruc
 	currentComponent="tMap_1";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row1");
+					}
+				
 		int tos_count_tMap_1 = 0;
 		
 
@@ -64719,6 +65608,10 @@ sortie_Excel1Struct sortie_Excel1_tmp = new sortie_Excel1Struct();
 	currentComponent="tMap_1";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row1");
+					}
+					
 
 		
 		
@@ -64853,6 +65746,10 @@ if(sortie_Excel1 != null) {
 	currentComponent="tFilterRow_1";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_Excel1");
+					}
+					
 
           sortie_Excel = null;
     Operator_tFilterRow_1 ope_tFilterRow_1 = new Operator_tFilterRow_1("&&");
@@ -64964,6 +65861,10 @@ if(sortie_Excel != null) {
 	currentComponent="tMap_20";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_Excel");
+					}
+					
 
 		
 		
@@ -65204,6 +66105,10 @@ if(sortie_EUR_WSP != null) {
 	currentComponent="tUniqRow_18";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_EUR_WSP");
+					}
+					
 row35 = null;			
 if(sortie_EUR_WSP.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_18.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -65347,6 +66252,10 @@ if(row35 != null) {
 	currentComponent="tFilterRow_2";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row35");
+					}
+					
 
           row37 = null;
     Operator_tFilterRow_2 ope_tFilterRow_2 = new Operator_tFilterRow_2("||");
@@ -65423,6 +66332,10 @@ if(row37 != null) {
 	currentComponent="tHashOutput_9";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row37");
+					}
+					
 
 
 
@@ -65566,6 +66479,10 @@ if(sortie_full_eur_wsp != null) {
 	currentComponent="tMap_21";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_eur_wsp");
+					}
+					
 
 		
 		
@@ -65713,6 +66630,10 @@ if(copyOfsortie_EUR_WSP != null) {
 	currentComponent="tUniqRow_19";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfsortie_EUR_WSP");
+					}
+					
 row36 = null;			
 if(copyOfsortie_EUR_WSP.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_19.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -65856,6 +66777,10 @@ if(row36 != null) {
 	currentComponent="tFilterRow_3";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row36");
+					}
+					
 
           row38 = null;
     Operator_tFilterRow_3 ope_tFilterRow_3 = new Operator_tFilterRow_3("||");
@@ -65932,6 +66857,10 @@ if(row38 != null) {
 	currentComponent="tHashOutput_10";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row38");
+					}
+					
 
 
 
@@ -66075,6 +67004,10 @@ if(sortie_full_rrp_eur != null) {
 	currentComponent="tMap_23";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_rrp_eur");
+					}
+					
 
 		
 		
@@ -66222,6 +67155,10 @@ if(copyOfsortie_EUR_WSP_0 != null) {
 	currentComponent="tUniqRow_20";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfsortie_EUR_WSP_0");
+					}
+					
 row43 = null;			
 if(copyOfsortie_EUR_WSP_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_20.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -66365,6 +67302,10 @@ if(row43 != null) {
 	currentComponent="tFilterRow_4";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row43");
+					}
+					
 
           row44 = null;
     Operator_tFilterRow_4 ope_tFilterRow_4 = new Operator_tFilterRow_4("||");
@@ -66441,6 +67382,10 @@ if(row44 != null) {
 	currentComponent="tHashOutput_11";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row44");
+					}
+					
 
 
 
@@ -66584,6 +67529,10 @@ if(sortie_full_gbp_wsp != null) {
 	currentComponent="tMap_24";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_gbp_wsp");
+					}
+					
 
 		
 		
@@ -66731,6 +67680,10 @@ if(copyOfcopyOfsortie_EUR_WSP_0 != null) {
 	currentComponent="tUniqRow_21";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfsortie_EUR_WSP_0");
+					}
+					
 row45 = null;			
 if(copyOfcopyOfsortie_EUR_WSP_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_21.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -66874,6 +67827,10 @@ if(row45 != null) {
 	currentComponent="tFilterRow_5";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row45");
+					}
+					
 
           row46 = null;
     Operator_tFilterRow_5 ope_tFilterRow_5 = new Operator_tFilterRow_5("||");
@@ -66950,6 +67907,10 @@ if(row46 != null) {
 	currentComponent="tHashOutput_12";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row46");
+					}
+					
 
 
 
@@ -67093,6 +68054,10 @@ if(sortie_full_GBP_RRP != null) {
 	currentComponent="tMap_25";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_GBP_RRP");
+					}
+					
 
 		
 		
@@ -67240,6 +68205,10 @@ if(copyOfcopyOfcopyOfsortie_EUR_WSP_0 != null) {
 	currentComponent="tUniqRow_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfsortie_EUR_WSP_0");
+					}
+					
 row47 = null;			
 if(copyOfcopyOfcopyOfsortie_EUR_WSP_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_22.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -67383,6 +68352,10 @@ if(row47 != null) {
 	currentComponent="tFilterRow_6";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row47");
+					}
+					
 
           row48 = null;
     Operator_tFilterRow_6 ope_tFilterRow_6 = new Operator_tFilterRow_6("||");
@@ -67459,6 +68432,10 @@ if(row48 != null) {
 	currentComponent="tHashOutput_13";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row48");
+					}
+					
 
 
 
@@ -67602,6 +68579,10 @@ if(sortie_full_CHF_WSP != null) {
 	currentComponent="tMap_26";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_CHF_WSP");
+					}
+					
 
 		
 		
@@ -67749,6 +68730,10 @@ if(copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0 != null) {
 	currentComponent="tUniqRow_23";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0");
+					}
+					
 row49 = null;			
 if(copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_23.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -67892,6 +68877,10 @@ if(row49 != null) {
 	currentComponent="tFilterRow_7";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row49");
+					}
+					
 
           row50 = null;
     Operator_tFilterRow_7 ope_tFilterRow_7 = new Operator_tFilterRow_7("||");
@@ -67968,6 +68957,10 @@ if(row50 != null) {
 	currentComponent="tHashOutput_14";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row50");
+					}
+					
 
 
 
@@ -68111,6 +69104,10 @@ if(sortie_full_chr_rrp != null) {
 	currentComponent="tMap_27";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_chr_rrp");
+					}
+					
 
 		
 		
@@ -68258,6 +69255,10 @@ if(copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0 != null) {
 	currentComponent="tUniqRow_24";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+					}
+					
 row55 = null;			
 if(copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_24.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -68401,6 +69402,10 @@ if(row55 != null) {
 	currentComponent="tFilterRow_8";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row55");
+					}
+					
 
           row56 = null;
     Operator_tFilterRow_8 ope_tFilterRow_8 = new Operator_tFilterRow_8("||");
@@ -68477,6 +69482,10 @@ if(row56 != null) {
 	currentComponent="tHashOutput_15";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row56");
+					}
+					
 
 
 
@@ -68620,6 +69629,10 @@ if(sortie_full_NOK_WSP != null) {
 	currentComponent="tMap_28";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_NOK_WSP");
+					}
+					
 
 		
 		
@@ -68767,6 +69780,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0 != null) {
 	currentComponent="tUniqRow_25";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0");
+					}
+					
 row57 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_25.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -68910,6 +69927,10 @@ if(row57 != null) {
 	currentComponent="tFilterRow_9";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row57");
+					}
+					
 
           row58 = null;
     Operator_tFilterRow_9 ope_tFilterRow_9 = new Operator_tFilterRow_9("||");
@@ -68986,6 +70007,10 @@ if(row58 != null) {
 	currentComponent="tHashOutput_16";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row58");
+					}
+					
 
 
 
@@ -69129,6 +70154,10 @@ if(sortie_full_nok_rrp != null) {
 	currentComponent="tMap_29";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_nok_rrp");
+					}
+					
 
 		
 		
@@ -69276,6 +70305,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0 != null) {
 	currentComponent="tUniqRow_26";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+					}
+					
 row61 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_26.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -69419,6 +70452,10 @@ if(row61 != null) {
 	currentComponent="tFilterRow_10";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row61");
+					}
+					
 
           row62 = null;
     Operator_tFilterRow_10 ope_tFilterRow_10 = new Operator_tFilterRow_10("||");
@@ -69495,6 +70532,10 @@ if(row62 != null) {
 	currentComponent="tHashOutput_17";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row62");
+					}
+					
 
 
 
@@ -69638,6 +70679,10 @@ if(sortie_full_DKK_RRP != null) {
 	currentComponent="tMap_30";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_DKK_RRP");
+					}
+					
 
 		
 		
@@ -69785,6 +70830,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0 != null) {
 	currentComponent="tUniqRow_27";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+					}
+					
 row64 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_27.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -69928,6 +70977,10 @@ if(row64 != null) {
 	currentComponent="tFilterRow_11";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row64");
+					}
+					
 
           row63 = null;
     Operator_tFilterRow_11 ope_tFilterRow_11 = new Operator_tFilterRow_11("||");
@@ -70004,6 +71057,10 @@ if(row63 != null) {
 	currentComponent="tHashOutput_18";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row63");
+					}
+					
 
 
 
@@ -70147,6 +71204,10 @@ if(sortie_full_DKK_WSP != null) {
 	currentComponent="tMap_31";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_DKK_WSP");
+					}
+					
 
 		
 		
@@ -70294,6 +71355,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0 != null) {
 	currentComponent="tUniqRow_28";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0");
+					}
+					
 row68 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_28.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -70437,6 +71502,10 @@ if(row68 != null) {
 	currentComponent="tFilterRow_12";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row68");
+					}
+					
 
           row67 = null;
     Operator_tFilterRow_12 ope_tFilterRow_12 = new Operator_tFilterRow_12("||");
@@ -70513,6 +71582,10 @@ if(row67 != null) {
 	currentComponent="tHashOutput_19";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row67");
+					}
+					
 
 
 
@@ -70656,6 +71729,10 @@ if(sortie_full_SEK_WSP != null) {
 	currentComponent="tMap_32";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_SEK_WSP");
+					}
+					
 
 		
 		
@@ -70803,6 +71880,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0 != null) {
 	currentComponent="tUniqRow_29";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0");
+					}
+					
 row69 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_29.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -70946,6 +72027,10 @@ if(row69 != null) {
 	currentComponent="tFilterRow_13";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row69");
+					}
+					
 
           Main1 = null;
     Operator_tFilterRow_13 ope_tFilterRow_13 = new Operator_tFilterRow_13("||");
@@ -71022,6 +72107,10 @@ if(Main1 != null) {
 	currentComponent="tHashOutput_20";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"Main1");
+					}
+					
 
 
 
@@ -71165,6 +72254,10 @@ if(sortie_full_SEK_RRP != null) {
 	currentComponent="tMap_33";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_SEK_RRP");
+					}
+					
 
 		
 		
@@ -71312,6 +72405,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0 != null) {
 	currentComponent="tUniqRow_30";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0");
+					}
+					
 row73 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_30.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -71455,6 +72552,10 @@ if(row73 != null) {
 	currentComponent="tFilterRow_14";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row73");
+					}
+					
 
           row74 = null;
     Operator_tFilterRow_14 ope_tFilterRow_14 = new Operator_tFilterRow_14("||");
@@ -71531,6 +72632,10 @@ if(row74 != null) {
 	currentComponent="tHashOutput_21";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row74");
+					}
+					
 
 
 
@@ -71674,6 +72779,10 @@ if(sortie_full_EUR_FIN_WSP != null) {
 	currentComponent="tMap_34";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"sortie_full_EUR_FIN_WSP");
+					}
+					
 
 		
 		
@@ -71770,6 +72879,10 @@ if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0 != nul
 	currentComponent="tUniqRow_31";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0");
+					}
+					
 row75 = null;			
 if(copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0.TRADEAGREEMENTJOURNALNUMBER == null){
 	finder_tUniqRow_31.TRADEAGREEMENTJOURNALNUMBER = null;
@@ -71913,6 +73026,10 @@ if(row75 != null) {
 	currentComponent="tFilterRow_15";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row75");
+					}
+					
 
           row76 = null;
     Operator_tFilterRow_15 ope_tFilterRow_15 = new Operator_tFilterRow_15("||");
@@ -71989,6 +73106,10 @@ if(row76 != null) {
 	currentComponent="tHashOutput_22";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row76");
+					}
+					
 
 
 
@@ -72588,6 +73709,9 @@ globalMap.put("tDBInput_5_NB_LINE",nb_line_tDBInput_5);
 ok_Hash.put("tDBInput_5", true);
 end_Hash.put("tDBInput_5", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk9", 0, "ok");
+				}
 				tWarn_1Process(globalMap);
 
 
@@ -72618,6 +73742,10 @@ end_Hash.put("tDBInput_5", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row1");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_1", true);
@@ -72647,6 +73775,10 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
     globalMap.put("tFilterRow_1_NB_LINE_REJECT", nb_line_reject_tFilterRow_1);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_Excel1");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_1", true);
@@ -72689,6 +73821,10 @@ end_Hash.put("tFilterRow_1", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_Excel");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_20", true);
@@ -72717,6 +73853,10 @@ end_Hash.put("tMap_20", System.currentTimeMillis());
 globalMap.put("tUniqRow_18_NB_UNIQUES",nb_uniques_tUniqRow_18);
 globalMap.put("tUniqRow_18_NB_DUPLICATES",nb_duplicates_tUniqRow_18);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_EUR_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_18", true);
@@ -72746,6 +73886,10 @@ end_Hash.put("tUniqRow_18", System.currentTimeMillis());
     globalMap.put("tFilterRow_2_NB_LINE_REJECT", nb_line_reject_tFilterRow_2);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row35");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_2", true);
@@ -72771,6 +73915,10 @@ end_Hash.put("tFilterRow_2", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_9_NB_LINE", nb_line_tHashOutput_9);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row37");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_9", true);
@@ -72814,6 +73962,10 @@ end_Hash.put("tHashOutput_9", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_eur_wsp");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_21", true);
@@ -72842,6 +73994,10 @@ end_Hash.put("tMap_21", System.currentTimeMillis());
 globalMap.put("tUniqRow_19_NB_UNIQUES",nb_uniques_tUniqRow_19);
 globalMap.put("tUniqRow_19_NB_DUPLICATES",nb_duplicates_tUniqRow_19);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfsortie_EUR_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_19", true);
@@ -72871,6 +74027,10 @@ end_Hash.put("tUniqRow_19", System.currentTimeMillis());
     globalMap.put("tFilterRow_3_NB_LINE_REJECT", nb_line_reject_tFilterRow_3);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row36");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_3", true);
@@ -72896,6 +74056,10 @@ end_Hash.put("tFilterRow_3", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_10_NB_LINE", nb_line_tHashOutput_10);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row38");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_10", true);
@@ -72939,6 +74103,10 @@ end_Hash.put("tHashOutput_10", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_rrp_eur");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_23", true);
@@ -72967,6 +74135,10 @@ end_Hash.put("tMap_23", System.currentTimeMillis());
 globalMap.put("tUniqRow_20_NB_UNIQUES",nb_uniques_tUniqRow_20);
 globalMap.put("tUniqRow_20_NB_DUPLICATES",nb_duplicates_tUniqRow_20);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfsortie_EUR_WSP_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_20", true);
@@ -72996,6 +74168,10 @@ end_Hash.put("tUniqRow_20", System.currentTimeMillis());
     globalMap.put("tFilterRow_4_NB_LINE_REJECT", nb_line_reject_tFilterRow_4);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row43");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_4", true);
@@ -73021,6 +74197,10 @@ end_Hash.put("tFilterRow_4", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_11_NB_LINE", nb_line_tHashOutput_11);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row44");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_11", true);
@@ -73064,6 +74244,10 @@ end_Hash.put("tHashOutput_11", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_gbp_wsp");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_24", true);
@@ -73092,6 +74276,10 @@ end_Hash.put("tMap_24", System.currentTimeMillis());
 globalMap.put("tUniqRow_21_NB_UNIQUES",nb_uniques_tUniqRow_21);
 globalMap.put("tUniqRow_21_NB_DUPLICATES",nb_duplicates_tUniqRow_21);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfsortie_EUR_WSP_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_21", true);
@@ -73121,6 +74309,10 @@ end_Hash.put("tUniqRow_21", System.currentTimeMillis());
     globalMap.put("tFilterRow_5_NB_LINE_REJECT", nb_line_reject_tFilterRow_5);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row45");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_5", true);
@@ -73146,6 +74338,10 @@ end_Hash.put("tFilterRow_5", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_12_NB_LINE", nb_line_tHashOutput_12);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row46");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_12", true);
@@ -73189,6 +74385,10 @@ end_Hash.put("tHashOutput_12", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_GBP_RRP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_25", true);
@@ -73217,6 +74417,10 @@ end_Hash.put("tMap_25", System.currentTimeMillis());
 globalMap.put("tUniqRow_22_NB_UNIQUES",nb_uniques_tUniqRow_22);
 globalMap.put("tUniqRow_22_NB_DUPLICATES",nb_duplicates_tUniqRow_22);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfsortie_EUR_WSP_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_22", true);
@@ -73246,6 +74450,10 @@ end_Hash.put("tUniqRow_22", System.currentTimeMillis());
     globalMap.put("tFilterRow_6_NB_LINE_REJECT", nb_line_reject_tFilterRow_6);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row47");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_6", true);
@@ -73271,6 +74479,10 @@ end_Hash.put("tFilterRow_6", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_13_NB_LINE", nb_line_tHashOutput_13);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row48");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_13", true);
@@ -73314,6 +74526,10 @@ end_Hash.put("tHashOutput_13", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_CHF_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_26", true);
@@ -73342,6 +74558,10 @@ end_Hash.put("tMap_26", System.currentTimeMillis());
 globalMap.put("tUniqRow_23_NB_UNIQUES",nb_uniques_tUniqRow_23);
 globalMap.put("tUniqRow_23_NB_DUPLICATES",nb_duplicates_tUniqRow_23);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_23", true);
@@ -73371,6 +74591,10 @@ end_Hash.put("tUniqRow_23", System.currentTimeMillis());
     globalMap.put("tFilterRow_7_NB_LINE_REJECT", nb_line_reject_tFilterRow_7);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row49");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_7", true);
@@ -73396,6 +74620,10 @@ end_Hash.put("tFilterRow_7", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_14_NB_LINE", nb_line_tHashOutput_14);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row50");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_14", true);
@@ -73439,6 +74667,10 @@ end_Hash.put("tHashOutput_14", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_chr_rrp");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_27", true);
@@ -73467,6 +74699,10 @@ end_Hash.put("tMap_27", System.currentTimeMillis());
 globalMap.put("tUniqRow_24_NB_UNIQUES",nb_uniques_tUniqRow_24);
 globalMap.put("tUniqRow_24_NB_DUPLICATES",nb_duplicates_tUniqRow_24);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_24", true);
@@ -73496,6 +74732,10 @@ end_Hash.put("tUniqRow_24", System.currentTimeMillis());
     globalMap.put("tFilterRow_8_NB_LINE_REJECT", nb_line_reject_tFilterRow_8);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row55");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_8", true);
@@ -73521,6 +74761,10 @@ end_Hash.put("tFilterRow_8", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_15_NB_LINE", nb_line_tHashOutput_15);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row56");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_15", true);
@@ -73564,6 +74808,10 @@ end_Hash.put("tHashOutput_15", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_NOK_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_28", true);
@@ -73592,6 +74840,10 @@ end_Hash.put("tMap_28", System.currentTimeMillis());
 globalMap.put("tUniqRow_25_NB_UNIQUES",nb_uniques_tUniqRow_25);
 globalMap.put("tUniqRow_25_NB_DUPLICATES",nb_duplicates_tUniqRow_25);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_25", true);
@@ -73621,6 +74873,10 @@ end_Hash.put("tUniqRow_25", System.currentTimeMillis());
     globalMap.put("tFilterRow_9_NB_LINE_REJECT", nb_line_reject_tFilterRow_9);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row57");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_9", true);
@@ -73646,6 +74902,10 @@ end_Hash.put("tFilterRow_9", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_16_NB_LINE", nb_line_tHashOutput_16);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row58");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_16", true);
@@ -73689,6 +74949,10 @@ end_Hash.put("tHashOutput_16", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_nok_rrp");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_29", true);
@@ -73717,6 +74981,10 @@ end_Hash.put("tMap_29", System.currentTimeMillis());
 globalMap.put("tUniqRow_26_NB_UNIQUES",nb_uniques_tUniqRow_26);
 globalMap.put("tUniqRow_26_NB_DUPLICATES",nb_duplicates_tUniqRow_26);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_26", true);
@@ -73746,6 +75014,10 @@ end_Hash.put("tUniqRow_26", System.currentTimeMillis());
     globalMap.put("tFilterRow_10_NB_LINE_REJECT", nb_line_reject_tFilterRow_10);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row61");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_10", true);
@@ -73771,6 +75043,10 @@ end_Hash.put("tFilterRow_10", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_17_NB_LINE", nb_line_tHashOutput_17);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row62");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_17", true);
@@ -73814,6 +75090,10 @@ end_Hash.put("tHashOutput_17", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_DKK_RRP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_30", true);
@@ -73842,6 +75122,10 @@ end_Hash.put("tMap_30", System.currentTimeMillis());
 globalMap.put("tUniqRow_27_NB_UNIQUES",nb_uniques_tUniqRow_27);
 globalMap.put("tUniqRow_27_NB_DUPLICATES",nb_duplicates_tUniqRow_27);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_27", true);
@@ -73871,6 +75155,10 @@ end_Hash.put("tUniqRow_27", System.currentTimeMillis());
     globalMap.put("tFilterRow_11_NB_LINE_REJECT", nb_line_reject_tFilterRow_11);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row64");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_11", true);
@@ -73896,6 +75184,10 @@ end_Hash.put("tFilterRow_11", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_18_NB_LINE", nb_line_tHashOutput_18);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row63");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_18", true);
@@ -73939,6 +75231,10 @@ end_Hash.put("tHashOutput_18", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_DKK_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_31", true);
@@ -73967,6 +75263,10 @@ end_Hash.put("tMap_31", System.currentTimeMillis());
 globalMap.put("tUniqRow_28_NB_UNIQUES",nb_uniques_tUniqRow_28);
 globalMap.put("tUniqRow_28_NB_DUPLICATES",nb_duplicates_tUniqRow_28);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_28", true);
@@ -73996,6 +75296,10 @@ end_Hash.put("tUniqRow_28", System.currentTimeMillis());
     globalMap.put("tFilterRow_12_NB_LINE_REJECT", nb_line_reject_tFilterRow_12);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row68");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_12", true);
@@ -74021,6 +75325,10 @@ end_Hash.put("tFilterRow_12", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_19_NB_LINE", nb_line_tHashOutput_19);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row67");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_19", true);
@@ -74064,6 +75372,10 @@ end_Hash.put("tHashOutput_19", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_SEK_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_32", true);
@@ -74092,6 +75404,10 @@ end_Hash.put("tMap_32", System.currentTimeMillis());
 globalMap.put("tUniqRow_29_NB_UNIQUES",nb_uniques_tUniqRow_29);
 globalMap.put("tUniqRow_29_NB_DUPLICATES",nb_duplicates_tUniqRow_29);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_29", true);
@@ -74121,6 +75437,10 @@ end_Hash.put("tUniqRow_29", System.currentTimeMillis());
     globalMap.put("tFilterRow_13_NB_LINE_REJECT", nb_line_reject_tFilterRow_13);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row69");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_13", true);
@@ -74146,6 +75466,10 @@ end_Hash.put("tFilterRow_13", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_20_NB_LINE", nb_line_tHashOutput_20);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"Main1");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_20", true);
@@ -74189,6 +75513,10 @@ end_Hash.put("tHashOutput_20", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_SEK_RRP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_33", true);
@@ -74217,6 +75545,10 @@ end_Hash.put("tMap_33", System.currentTimeMillis());
 globalMap.put("tUniqRow_30_NB_UNIQUES",nb_uniques_tUniqRow_30);
 globalMap.put("tUniqRow_30_NB_DUPLICATES",nb_duplicates_tUniqRow_30);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_30", true);
@@ -74246,6 +75578,10 @@ end_Hash.put("tUniqRow_30", System.currentTimeMillis());
     globalMap.put("tFilterRow_14_NB_LINE_REJECT", nb_line_reject_tFilterRow_14);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row73");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_14", true);
@@ -74271,6 +75607,10 @@ end_Hash.put("tFilterRow_14", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_21_NB_LINE", nb_line_tHashOutput_21);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row74");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_21", true);
@@ -74314,6 +75654,10 @@ end_Hash.put("tHashOutput_21", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"sortie_full_EUR_FIN_WSP");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_34", true);
@@ -74342,6 +75686,10 @@ end_Hash.put("tMap_34", System.currentTimeMillis());
 globalMap.put("tUniqRow_31_NB_UNIQUES",nb_uniques_tUniqRow_31);
 globalMap.put("tUniqRow_31_NB_DUPLICATES",nb_duplicates_tUniqRow_31);
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfcopyOfsortie_EUR_WSP_0_0_0_0");
+			  	}
+			  	
  
 
 ok_Hash.put("tUniqRow_31", true);
@@ -74371,6 +75719,10 @@ end_Hash.put("tUniqRow_31", System.currentTimeMillis());
     globalMap.put("tFilterRow_15_NB_LINE_REJECT", nb_line_reject_tFilterRow_15);
     
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row75");
+			  	}
+			  	
  
 
 ok_Hash.put("tFilterRow_15", true);
@@ -74396,6 +75748,10 @@ end_Hash.put("tFilterRow_15", System.currentTimeMillis());
 
 	
 globalMap.put("tHashOutput_22_NB_LINE", nb_line_tHashOutput_22);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row76");
+			  	}
+			  	
  
 
 ok_Hash.put("tHashOutput_22", true);
@@ -74471,6 +75827,10 @@ end_Hash.put("tHashOutput_22", System.currentTimeMillis());
 				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tDBInput_5:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
 								}	    				    			
 					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
+								} 
+							
 							tHashInput_9Process(globalMap); 
 						
 
@@ -74483,6 +75843,8 @@ end_Hash.put("tHashOutput_22", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -76082,6 +77444,8 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 				throw te;
 			}catch(java.lang.Error error){	
 				
+					runStat.stopThreadStat();
+				
 				throw error;
 			}finally{
 				
@@ -76570,6 +77934,10 @@ copyOfcopyOfsortie_fashionStruct copyOfcopyOfsortie_fashion = new copyOfcopyOfso
 	currentComponent="tAdvancedHash_copyOfcopyOfsortie_fashion";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"copyOfcopyOfsortie_fashion");
+					}
+				
 		int tos_count_tAdvancedHash_copyOfcopyOfsortie_fashion = 0;
 		
 
@@ -76615,6 +77983,10 @@ copyOfcopyOfsortie_fashionStruct copyOfcopyOfsortie_fashion = new copyOfcopyOfso
 	currentComponent="tMap_7";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row24");
+					}
+				
 		int tos_count_tMap_7 = 0;
 		
 
@@ -76831,6 +78203,10 @@ copyOfcopyOfsortie_fashionStruct copyOfcopyOfsortie_fashion_tmp = new copyOfcopy
 	currentComponent="tMap_7";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row24");
+					}
+					
 
 		
 		
@@ -76918,6 +78294,10 @@ if(copyOfcopyOfsortie_fashion != null) {
 	currentComponent="tAdvancedHash_copyOfcopyOfsortie_fashion";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"copyOfcopyOfsortie_fashion");
+					}
+					
 
 
 			   
@@ -77103,6 +78483,10 @@ end_Hash.put("tDBInput_2", System.currentTimeMillis());
 
 
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row24");
+			  	}
+			  	
  
 
 ok_Hash.put("tMap_7", true);
@@ -77130,6 +78514,10 @@ end_Hash.put("tMap_7", System.currentTimeMillis());
 
 tHash_Lookup_copyOfcopyOfsortie_fashion.endPut();
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"copyOfcopyOfsortie_fashion");
+			  	}
+			  	
  
 
 ok_Hash.put("tAdvancedHash_copyOfcopyOfsortie_fashion", true);
@@ -77160,6 +78548,8 @@ end_Hash.put("tAdvancedHash_copyOfcopyOfsortie_fashion", System.currentTimeMilli
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -77407,6 +78797,8 @@ end_Hash.put("connectionStatsLogs_Commit", System.currentTimeMillis());
 				throw te;
 			}catch(java.lang.Error error){	
 				
+					runStat.stopThreadStat();
+				
 				throw error;
 			}finally{
 				
@@ -77632,6 +79024,8 @@ end_Hash.put("connectionStatsLogs", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -78032,6 +79426,10 @@ public void talendLogs_LOGSProcess(final java.util.Map<String, Object> globalMap
 	currentComponent="talendLogs_DB";
 
 	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"Main");
+					}
+				
 		int tos_count_talendLogs_DB = 0;
 		
 
@@ -78226,6 +79624,10 @@ try {
 	currentComponent="talendLogs_DB";
 
 	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"Main");
+					}
+					
 
 
 
@@ -78532,6 +79934,10 @@ end_Hash.put("talendLogs_LOGS", System.currentTimeMillis());
     
 	
 
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"Main");
+			  	}
+			  	
  
 
 ok_Hash.put("talendLogs_DB", true);
@@ -78553,6 +79959,10 @@ end_Hash.put("talendLogs_DB", System.currentTimeMillis());
 				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:talendLogs_LOGS:sub_ok_talendLogs_connectionStatsLogs_Commit", "", Thread.currentThread().getId() + "", "", "", "", "", "");
 								}	    				    			
 					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("sub_ok_talendLogs_connectionStatsLogs_Commit", 0, "ok");
+								} 
+							
 							connectionStatsLogs_CommitProcess(globalMap); 
 						
 
@@ -78567,6 +79977,8 @@ end_Hash.put("talendLogs_DB", System.currentTimeMillis());
 				
 				throw te;
 			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
 				
 				throw error;
 			}finally{
@@ -78743,6 +80155,16 @@ end_Hash.put("talendLogs_DB", System.currentTimeMillis());
             isChildJob = true;
         }
 
+        if (portStats != null) {
+            // portStats = -1; //for testing
+            if (portStats < 0 || portStats > 65535) {
+                // issue:10869, the portStats is invalid, so this client socket can't open
+                System.err.println("The statistics socket port " + portStats + " is invalid.");
+                execStat = false;
+            }
+        } else {
+            execStat = false;
+        }
 
         try {
             //call job/subjob with an existing context, like: --context=production. if without this parameter, there will use the default context instead.
@@ -78950,6 +80372,16 @@ end_Hash.put("talendLogs_DB", System.currentTimeMillis());
         //Resume: jobStart
         resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","","","",resumeUtil.convertToJsonText(context,parametersToEncrypt));
 
+if(execStat) {
+    try {
+        runStat.openSocket(!isChildJob);
+        runStat.setAllPID(rootPid, fatherPid, pid, jobName);
+        runStat.startThreadStat(clientHost, portStats);
+        runStat.updateStatOnJob(RunStat.JOBSTART, fatherNode);
+    } catch (java.io.IOException ioException) {
+        ioException.printStackTrace();
+    }
+}
 
 
 
@@ -79029,6 +80461,10 @@ e_tPostjob_1.printStackTrace();
 
 
 
+if (execStat) {
+    runStat.updateStatOnJob(RunStat.JOBEND, fatherNode);
+    runStat.stopThreadStat();
+}
     int returnCode = 0;
     if(errorCode == null) {
          returnCode = status != null && status.equals("failure") ? 1 : 0;
@@ -79192,6 +80628,6 @@ e_tPostjob_1.printStackTrace();
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     1837615 characters generated by Talend Open Studio for Data Integration 
- *     on the 29 décembre 2023 11:09:05 GMT
+ *     1877116 characters generated by Talend Open Studio for Data Integration 
+ *     on the 4 janvier 2024 14:41:03 GMT
  ************************************************************************************************/

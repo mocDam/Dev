@@ -167,9 +167,7 @@
     <module>jobs/process/Common/gettokenandsendmailoauth2_6.0</module>
     <module>jobs/process/Salesforce_Bynder/Bynder/uploadassetintobynder_prod_1.16</module>
     <module>jobs/process/masterfile_integration_bdd_0.43</module>
-    <module>jobs/process/Salesforce_Bynder/Bynder/equilibrer_0.1</module>
     <module>jobs/process/Salesforce_Bynder/Bynder/recoverassetsfrombyndertosf_debug_0.4</module>
-    <module>jobs/process/Salesforce_Bynder/Bynder/recoverassetsfrombyndertosf_dev_0.4</module>
     <module>jobs/process/Salesforce_Bynder/Bynder/recoverassetsfrombyndertosf_prod_0.4</module>
   </modules>
   <properties>

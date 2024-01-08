@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------< org.example.dev.job:MASTERFILE_EXTRACT_PRICES_1 >-----------
+[INFO] Building DEV MASTERFILE_EXTRACT_PRICES_1-0.13.0 (0.13,Jobs) 0.13.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.talend.libraries:jboss-serialization:jar:6.0.0 is missing, no dependency information available
+[WARNING] The POM for org.talend.libraries:mssql-jdbc:jar:6.0.0 is missing, no dependency information available
+[WARNING] The POM for org.talend.libraries:trove:jar:6.0.0 is missing, no dependency information available
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[INFO] Building jar: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\masterfile_extract_prices_1_0.13\target\masterfile_extract_prices_1_0_13.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.0.0:single (default) @ MASTERFILE_EXTRACT_PRICES_1 ---
+[INFO] Reading assembly descriptor: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\masterfile_extract_prices_1_0.13/src/main/assemblies/assembly.xml
+[WARNING] Missing POM for org.talend.libraries:jboss-serialization:jar:6.0.0
+[WARNING] Missing POM for org.talend.libraries:mssql-jdbc:jar:6.0.0
+[WARNING] Missing POM for org.talend.libraries:trove:jar:6.0.0
+[INFO] Building zip: C:\TALEND\TOS_DI-20191031_1204-V7.3.1M3\workspace\DEV\poms\jobs\process\masterfile_extract_prices_1_0.13\target\masterfile_extract_prices_1_0_13.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.505 s
+[INFO] Finished at: 2024-01-04T14:41:15Z
+[INFO] ------------------------------------------------------------------------
