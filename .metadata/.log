@@ -1,0 +1,20 @@
+!SESSION 2024-01-04 12:41:19.131 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_391
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2024-01-04 12:41:20.933
+!MESSAGE Bundle org.eclipse.jdt.launching.macosx@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2024-01-04 12:41:20.934
+!MESSAGE Bundle org.eclipse.jdt.launching.ui.macosx@4 not found.
+
+!ENTRY org.talend.platform.logging 1 0 2024-01-04 12:41:26.150
+!MESSAGE 2024-01-04 12:41:26,141 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Users\MohamedMoctarElAM\Desktop\TOS_DI-20191031_1204-V7.3.1M3\configuration\studio.keys
+
+
+!ENTRY org.talend.platform.logging 1 0 2024-01-04 12:42:18.338
+!MESSAGE 2024-01-04 12:42:18,337 INFO  org.talend.repository.ui.login.LoginProjectPage  - validate updatesite...
+
